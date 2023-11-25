@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap">
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <script>
+    function submitQuiz() {
+        // Подсчет баллов
+        let score = 0;
+
+        // Проверка правильных ответов
+        if ($('input[name="q1"]:checked').val() === 'A') {
+            score++;
+        }
+        if ($('input[name="q2"]:checked').val() === 'C') {
+            score++;
+        }
+        if ($('input[name="q3"]:checked').val() === 'C') {
+            score++;
+        }
+        if ($('input[name="q4"]:checked').val() === 'C') {
+            score++;
+        }
+        if ($('input[name="q5"]:checked').val() === 'B') {
+            score++;
+        }
+        if ($('input[name="q6"]:checked').val() === 'A') {
+            score++;
+        }
+        if ($('input[name="q7"]:checked').val() === 'A') {
+            score++;
+        }
+        if ($('input[name="q8"]:checked').val() === 'C') {
+            score++;
+        }
+        if ($('input[name="q9"]:checked').val() === 'B') {
+            score++;
+        }
+        if ($('input[name="q10"]:checked').val() === 'C') {
+            score++;
+        }
+
+        // Вывод результатов
+        const resultsDiv = $('#results');
+        resultsDiv.html(`Your score: ${score}/10`);
+    }
+  </script>
+
+  <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('abai.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            color: black; /* Change text color to black */
+            padding: 20px;
+            cursor: pointer;
+            font-size: 2.7em;
+            font-weight: bold; /* Apply bold font weight */
+            margin-right: 1200px;
+            font-family: 'Dancing Script', cursive; /* Apply Dancing Script font family */
+
+            /* Animation effect */
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        header:hover {
+            font-size: 2.95em; /* Increase font size on hover */
+        }
+
+        nav {
+            background-color: transparent;
+            color: black; /* Change text color to black */
+            border-bottom: 2px solid black;
+            padding: 10px 20px;
+            margin-top: 1px;
+            font-size: 1.75em;
+            font-weight: bold; /* Apply bold font weight */
+            margin-left: 40px;
+            width: 55%;
+            font-family: 'Times New Roman', serif; /* Apply Times New Roman font to nav bar */
+
+            /* Animation effect */
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        nav a {
+            color: black; /* Change text color to black */
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            font-size: 1.1em; /* Increase font size on hover */
+        }
+
+        .container-text {
+            width: 300px;
+            margin: 50px 0 0 100px; /* Set margin to 50px from the top and 100px from the left */
+            text-align: left;
+            color: black; /* Change text color to black */
+            font-size: 2em; /* Increase font size for the main text */
+            font-weight: bold; /* Apply bold font weight */
+            margin-top: 100px;
+            font-family: 'Dancing Script', cursive; /* Apply Dancing Script font family */
+
+        }
+        .question {
+        margin-bottom: 20px;
+    }
+
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .options label {
+        width: 45%; /* Ширина для двух вариантов ответов на одной строке */
+        display: block;
+    }
+
+    /* Стили для кнопки Submit */
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Стили для результатов */
+    #results {
+        margin-top: 20px;
+        font-size: 1.5em;
+        font-weight: bold;
+    
+    }
+    .question p {
+        font-size: 1.25em; /* Увеличиваем размер текста вопроса */
+    }
+    </style>
+    
+    
+    <title>Abai K.</title>
+</head>
+<body>
+
+<header onclick="location.href='home.html'">
+    Abai K.
+</header>
+
+<nav>
+    <a href="biography.html">Biography</a>
+    <a href="proverbs.html">The Book Of Words</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container-text">
+    <h2>Quiz</h2>
+    <form id="quizForm">
+        <!-- Вопрос 1 -->
+        <div class="question">
+            <p>1. What is Abai Kunanbaev's full name?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A) Abai Qunanbayuli</label>
+                <label><input type="radio" name="q1" value="B"> B) Ibrahim Qunanbay</label>
+                <label><input type="radio" name="q1" value="C"> C) Abai Karasy</label>
+                <label><input type="radio" name="q1" value="D"> D) Kunanbaev Abai</label>
+            </div>
+        </div>
+        <!-- Вопрос 2 -->
+<div class="question">
+    <p >2. In which region was Abai Kunanbaev born?</p>
+    <div class="options">
+        <label><input type="radio" name="q2" value="A"> A) Almaty</label>
+        <label><input type="radio" name="q2" value="B"> B) Astana</label>
+        <label><input type="radio" name="q2" value="C"> C) Chingiz Mountains</label>
+        <label><input type="radio" name="q2" value="D"> D) Aral Sea</label>
+    </div>
+</div>
+<!-- Вопрос 3 -->
+<div class="question">
+    <p>3. Who played a significant role in Abai's early education, instilling in him a deep appreciation for literature and music?</p>
+    <div class="options">
+        <label><input type="radio" name="q3" value="A"> A) His father, Qunanbay</label>
+        <label><input type="radio" name="q3" value="B"> B) His grandfather</label>
+        <label><input type="radio" name="q3" value="C"> C) His mother, Ulzhan</label>
+        <label><input type="radio" name="q3" value="D"> D) A private tutor</label>
+    </div>
+</div>
+<!-- Вопрос 4 -->
+<div class="question">
+    <p>4. What language did Abai study in his traditional education?</p>
+    <div class="options">
+        <label><input type="radio" name="q4" value="A"> A) Russian</label>
+        <label><input type="radio" name="q4" value="B"> B) Kazakh</label>
+        <label><input type="radio" name="q4" value="C"> C) Arabic and Persian</label>
+        <label><input type="radio" name="q4" value="D"> D) Turkish</label>
+    </div>
+</div>
+<!-- Вопрос 5 -->
+<div class="question">
+    <p>5. What did Abai Kunanbaev advocate for in Kazakh society?</p>
+    <div class="options">
+        <label><input type="radio" name="q5" value="A"> A) Preservation of traditional nomadic lifestyle</label>
+        <label><input type="radio" name="q5" value="B"> B) Social reform and modernization</label>
+        <label><input type="radio" name="q5" value="C"> C) Isolation from the outside world</label>
+        <label><input type="radio" name="q5" value="D"> D) Religious orthodoxy</label>
+    </div>
+</div>
+
+<!-- Вопрос 6 -->
+<div class="question">
+    <p>6. Which philosophical poem by Abai explores the complexities of life, morality, and the pursuit of knowledge?</p>
+    <div class="options">
+        <label><input type="radio" name="q6" value="A"> A) Kozimnin Karasy</label>
+        <label><input type="radio" name="q6" value="B"> B) Nomadic Echoes</label>
+        <label><input type="radio" name="q6" value="C"> C) Steppes of Wisdom</label>
+        <label><input type="radio" name="q6" value="D"> D) Enlightenment Dreams</label>
+    </div>
+</div>
+
+<!-- Вопрос 7 -->
+<div class="question">
+    <p>7. What themes did Abai Kunanbaev often explore in his poetry?</p>
+    <div class="options">
+        <label><input type="radio" name="q7" value="A"> A) Love, nature, morality</label>
+        <label><input type="radio" name="q7" value="B"> B) War, politics, technology</label>
+        <label><input type="radio" name="q7" value="C"> C) Mythology, astrology, astronomy</label>
+        <label><input type="radio" name="q7" value="D"> D) Comedy, tragedy, satire</label>
+    </div>
+</div>
+<!-- Вопрос 8 -->
+<div class="question">
+    <p>8. How did Abai Kunanbaev address the tension between preserving traditional Kazakh values and embracing modernization in his writings?</p>
+    <div class="options">
+        <label><input type="radio" name="q8" value="A"> A) By rejecting modernization entirely</label>
+        <label><input type="radio" name="q8" value="B"> B) By advocating for the complete abandonment of traditional values</label>
+        <label><input type="radio" name="q8" value="C"> C) By finding a balance between tradition and modernity</label>
+        <label><input type="radio" name="q8" value="D"> D) By promoting isolation from external influences</label>
+    </div>
+</div>
+
+<!-- Вопрос 9 -->
+<div class="question">
+    <p>9. What is the significance of Abai Kunanbaev's views on education?</p>
+    <div class="options">
+        <label><input type="radio" name="q9" value="A"> A) He opposed education entirely</label>
+        <label><input type="radio" name="q9" value="B"> B) He advocated for educational reforms and enlightenment</label>
+        <label><input type="radio" name="q9" value="C"> C) He believed in preserving traditional oral education</label>
+        <label><input type="radio" name="q9" value="D"> D) He focused on vocational training only</label>
+    </div>
+</div>
+
+<!-- Вопрос 10 -->
+<div class="question">
+    <p>10. How has Abai Kunanbaev's legacy endured in Kazakh culture?</p>
+    <div class="options">
+        <label><input type="radio" name="q10" value="A"> A) By promoting isolationism</label>
+        <label><input type="radio" name="q10" value="B"> B) Through his contributions to music</label>
+        <label><input type="radio" name="q10" value="C"> C) Through his impact on literature and cultural identity</label>
+        <label><input type="radio" name="q10" value="D"> D) By rejecting traditional values</label>
+    </div>
+</div>
+
+
+        
+
+        <button type="button" onclick="submitQuiz()">Submit</button>
+    </form>
+
+    <!-- Показ результатов -->
+    <div id="results"></div>
+</div>
+
+
+</body>
+</html>

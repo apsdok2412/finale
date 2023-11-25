@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('abai.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      color: black;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 2.7em;
+      font-weight: bold;
+      margin-right: 1200px;
+      font-family: 'Dancing Script', cursive;
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    header:hover {
+      font-size: 2.95em;
+    }
+
+    nav {
+      background-color: transparent;
+      color: black;
+      border-bottom: 2px solid black;
+      padding: 10px 20px;
+      margin-top: 1px;
+      font-size: 1.75em;
+      font-weight: bold;
+      margin-left: 40px;
+      width: 55%;
+      font-family: 'Times New Roman', serif;
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    nav a {
+      color: black;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      font-size: 1.1em;
+    }
+
+    .biography-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s, transform 0.8s;
+      overflow: auto;
+      width: 100%;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.7); /* Прозрачный белый цвет фона */
+      padding: 20px;
+      font-size: 1.8em;
+    }
+    
+    .background-container {
+      background-image: url('your-static-background-image.jpg'); /* Set your static background image */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      height: 100vh; /* Adjust the height as needed */
+    }
+
+    .scrollable-container {
+      overflow-y: hidden; /* Enable vertical scrollbar when content exceeds the height */
+      padding: 1px; /* Add padding for a better appearance */
+      height: 100%; /* Make the container fill the entire height of the background container */
+      background-color: rgba(239, 221, 221, 0.7);
+      margin-left: 40px;
+      width: 95%;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        );
+      }
+
+      function handleScrollAnimation() {
+        var biographySection = $(".biography-section");
+        if (isElementInViewport(biographySection[0]) && biographySection.css("opacity") == 0) {
+          biographySection.addClass("fade show"); // Bootstrap fade-in class
+          biographySection.css({
+            opacity: 1,
+            transform: "translateY(0)"
+          });
+        }
+      }
+
+      $(window).on("scroll", function() {
+        handleScrollAnimation();
+      });
+
+      handleScrollAnimation();
+    });
+  </script>
+
+  <title>Abai K.</title>
+</head>
+<body>
+
+<header onclick="location.href='home.html'">
+  Abai K.
+</header>
+
+<nav>
+  <a href="biography.html">Biography</a>
+  <a href="proverbs.html">The Book Of Words</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="background-container">
+  <div class="scrollable-container">
+  <p style="font-size: 1.4em;">
+    Abai Kunanbaev, often referred to as Abai Qunanbayuli, was a prominent Kazakh poet, philosopher, and cultural figure who lived during the 19th century. Born on August 10, 1845, in what is now the Chingiz Mountains of Kazakhstan, Abai played a crucial role in shaping the cultural and intellectual landscape of the Kazakh people. </p>
+  <p style="font-size: 1.4em;"> 
+    Abai was born into a noble family, and his given name was Ibrahim. His father, Qunanbay, was a tribal chief, and Abai grew up in an environment where he was exposed to the rich traditions of Kazakh nomadic culture. Despite the prevailing norms of the time that limited educational opportunities for women, Abai's mother, Ulzhan, played a significant role in his early education, instilling in him a deep appreciation for literature, poetry, and music.</p>
+  <p style="font-size: 1.4em;"> 
+    In his youth, Abai received a traditional education in Arabic and Persian languages, which were the academic standards of the time. However, he also displayed an early interest in Russian literature and European philosophy, which set him apart from his contemporaries. This exposure to diverse intellectual traditions greatly influenced Abai's worldview and later became evident in his literary works.</p>
+  <p style="font-size: 1.4em;">    
+    Abai Kunanbaev is best known for his contributions to Kazakh poetry and literature. His poetry reflects a synthesis of traditional Kazakh nomadic culture and the influence of Western thought. Abai's works often explored themes of love, nature, morality, and the challenges of modernization facing the Kazakh society in the 19th century. One of his most celebrated works is the philosophical poem "Kozimnin Karasy" ("The Book of My Grandfather"), where he delves into the complexities of life, morality, and the pursuit of knowledge. </p>
+ <p style="font-size: 1.4em;"> 
+    Abai was not only a poet but also a social reformer. He advocated for educational reforms and the modernization of Kazakh society, emphasizing the importance of combining traditional values with knowledge from the broader world. His ideas on the need for education and enlightenment played a pivotal role in the later cultural and social development of Kazakhstan.</p>
+  <p style="font-size: 1.4em;">
+    Abai Kunanbaev passed away on July 6, 1904, leaving behind a lasting legacy as a poet, philosopher, and advocate for the intellectual and cultural development of the Kazakh people. His works continue to be celebrated as a cornerstone of Kazakh literature, and Abai remains an enduring symbol of enlightenment and cultural pride in Kazakhstan.</p>
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Add the link to the Dancing Script font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+  <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('abai.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            color: black; /* Change text color to black */
+            padding: 20px;
+            cursor: pointer;
+            font-size: 2.7em;
+            font-weight: bold; /* Apply bold font weight */
+            margin-right: 1200px;
+            font-family: 'Dancing Script', cursive; /* Apply Dancing Script font family */
+
+            /* Animation effect */
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        header:hover {
+            font-size: 2.95em; /* Increase font size on hover */
+        }
+
+        nav {
+            background-color: transparent;
+            color: black; /* Change text color to black */
+            border-bottom: 2px solid black;
+            padding: 10px 20px;
+            margin-top: 1px;
+            font-size: 1.75em;
+            font-weight: bold; /* Apply bold font weight */
+            margin-left: 40px;
+            width: 55%;
+            font-family: 'Times New Roman', serif; /* Apply Times New Roman font to nav bar */
+
+            /* Animation effect */
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        nav a {
+            color: black; /* Change text color to black */
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            font-size: 1.1em; /* Increase font size on hover */
+        }
+
+        .container-text {
+            width: 300px;
+            margin: 50px 0 0 100px; /* Set margin to 50px from the top and 100px from the left */
+            text-align: left;
+            color: black; /* Change text color to black */
+            font-size: 2em; /* Increase font size for the main text */
+            font-weight: bold; /* Apply bold font weight */
+            margin-top: 100px;
+            font-family: 'Dancing Script', cursive; /* Apply Dancing Script font family */
+        }
+        #backgroundMusic {
+      position: fixed;
+      top: 10px; /* Adjust the top distance as needed */
+      right: 10px; /* Adjust the right distance as needed */
+      z-index: 1000; /* Ensure the player is above other elements */
+      background-color: #f8f9fa; /* Background color */
+      border: 1px solid #dee2e6; /* Border color */
+      border-radius: 5px; /* Border radius */
+      padding: 10px; /* Padding */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+    }
+    </style>
+    
+    
+    <title>Abai K.</title>
+</head>
+<body>
+
+<header onclick="location.href='home.html'">
+    Abai K.
+</header>
+
+<nav>
+    <a href="biography.html">Biography</a>
+    <a href="proverbs.html">The Book Of Words</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container-text">
+    <p>"If your knowledge cannot convince you, don't think that someone else will appreciate it. If you don't value your knowledge, how can you expect others to recognize you?"</p>
+</div>
+<audio id="backgroundMusic" controls loop autoplay class="rounded bg-light border">
+    <source src="abai.mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+  <footer id="footer" class="fixed-bottom bg-light py-3">
+    <p class="mb-0">&copy; 2023 Abai K. All rights reserved. | Contact: 87770495570</p>
+    <!-- Additional footer content, links, or contact details can be added here -->
+</footer>
+  <script>
+    // Event listeners
+    const header = document.getElementById('header');
+    const nav = document.getElementById('nav');
+    const quote = document.getElementById('quote');
+    const footer = document.getElementById('footer');
+  
+    header.addEventListener('click', function() {
+      alert('Header clicked!');
+    });
+  
+    nav.addEventListener('mouseover', function() {
+      alert('Mouse over navigation!');
+    });
+  
+    quote.addEventListener('keypress', function() {
+      alert('Keypress on the quote!');
+    });
+  
+    footer.addEventListener('click', function() {
+      alert('Footer clicked!');
+    });
+  </script>
+</body>
+</html>

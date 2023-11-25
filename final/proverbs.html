@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .card-container {
+      
+      border-radius: 15px; /* Add some border-radius for a rounded appearance */
+      padding: 20px;
+      margin: 50px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .card {
+      width: 800px; /* Increase the width to 800px */
+      margin: 0 auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+      margin-bottom: 20px; /* Increase the space between cards */
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      white-space: pre-wrap;
+    }
+
+    .answer {
+      display: none;
+    }
+
+    .show {
+      display: block;
+    }
+
+    #btn-next {
+      margin-top: 10px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('abai.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      text-align: center;
+      color: black;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 2.7em;
+      font-weight: bold;
+      margin-right: 1200px;
+      font-family: 'Dancing Script', cursive;
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    header:hover {
+      font-size: 2.95em;
+    }
+
+
+    nav {
+      background-color: transparent;
+      color: black;
+      border-bottom: 2px solid black;
+      padding: 10px 20px;
+      margin-top: 1px;
+      font-size: 1.75em;
+      font-weight: bold;
+      margin-left: 40px;
+      width: 55%;
+      font-family: 'Times New Roman', serif;
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    nav a {
+      color: black;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      font-size: 1.1em;
+    }
+
+    .container-text {
+      width: 300px;
+      margin: 50px 0 0 100px;
+      text-align: left;
+      color: black;
+      font-size: 2em;
+      font-weight: bold;
+      margin-top: 100px;
+      font-family: 'Dancing Script', cursive;
+    }
+  </style>
+  <title>Abai K.</title>
+</head>
+<body>
+
+<header onclick="location.href='home.html'">
+    Abai K.
+</header>
+
+<nav>
+    <a href="biography.html">Biography</a>
+    <a href="proverbs.html">The Book Of Words</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="card" id="card1">
+  <div class="card-body">
+    <h5 class="card-title">The first word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer1')">Show word</button>
+    <p class="answer" id="answer1">Was life good or bad, but it passed a lot. I had enough in this life: disputes, and painful gossip, and struggle and unworthy quarrels... But now, when I’m on the end of the road, being exhausted and tired, I am convinced of the futility of my good aspirations, in the vanity and frailty of human life. And tormented by the thought: What to devote the rest of my days? What to do? Try to alleviate the suffering of the people?Impossible. People are ungovernable. That’s the way for the one to whom the destiny prepared human ingratitude and curse, or youth, whose heart is hot and hasn’t still known the bitterness of defeat. Me, knowing this truth, save Allah from temptation.
+
+      Maybe increase the flock? Don't want to. Let the children if they ought to, bred cattle themselves. It would be a sin to waste the recent strength to alleviate the existence for thieves, beggars and villains.
+      
+      Comprehend the science? It is impossible. I have no one to give the knowledge, and from whom to take them. What's the use to sit in the desert, spreading expensive cloth and holding a yard? When there’s no one to share the grief or joy, the science turns into a burden: faster ages.
+      
+      Or, maybe devote myself to God? It goes wrong. The peace is required to believe. Whence to take godliness when there’s no calm neither in my feelings, nor in daily life? This world does not tolerate pilgrims.
+      
+      To bring up children? I can’t. Maybe I would, if I knew how and what to teach them, and whether the people that I see today need it at all. I cannot imagine the future of children worthy the use of their education and forces, and therefore cannot see the way of upbringing.
+      
+      Finally I decided to take companions, paper and ink, and to write down all my thoughts.
+      
+      Maybe someone will like any of my word, and he will rewrite it for himself, or just remember; and if not my words, as they say, will stay with me. At this point I stopped, and I have no other occupation than writing.</p>
+    <button class="btn btn-success" onclick="nextCard('card2')">Next word</button>
+  </div>
+</div>
+
+<div class="card" id="card2" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The second word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer2')">Show word</button>
+    <p class="answer" id="answer2">In my childhood I heard a lot about how the Kazakhs seeing the Uzbeks laughed at them: «Oh, you wide-brimmed, with an unclear jabber instead of human speech. You wouldn’t leave on the road, even a bundle of rotten reed! You take the bush at night for the enemy, fawn in the eyes, andrevile people behind the eyes. That’s why we call you «SART» which means a loud knocking or crackle».
+
+      The Kazakhs also laughed over the Nogais- the Tatars. «Hey, Tatars, you're afraid of camel, while riding on a horse get tired; you rest, when you are walking. You have a bearish agility, and your name is not Nogais but Nokais- clumsy. Maybe that’s why, all we just see around: the soldier – the Tatar, the fugitive – the Tatar, the grocer – the Tartar».
+      
+      They also laughed over the Russians. «Redheads do everything that comes to their mind. Seeing yurts in the endless steppe rush headlong to them and believe everything they are told. We even asked them to show the "Uzun-fist", and try to see yourself how they found out about you at the other end of the steppe ...»
+      
+      I laughed joyfully and proudly, listening to these stories. «Oh, Allah, - I thought delighted – no one, it turns out, cannot compare with my great nation. » Now I see that there is no plant that is not raised by the Sart, no tastier fruit than in the garden of the Sart. You will not find a country that is not visited by the Sart, trading, there is simply no thing that he could not make. Everyone in the town is too busy to keep an eye on each other’s affairs, that’s why they are more amicable. Earlier in fact they made ​​clothes for the Kazakhs. We took even shrouds for the dead from them, instead we gave them cattle, for which foolishly killed each other. When the Russians came, the Sarts were ahead of us again, having adopted from the Russians their skills. Wealth, and piety, and skills, and courtesy- all of these have the Sarts now.
+      
+      Look at the Tatars. They carry soldiery, withstand poverty, endure grief and love God.
+      
+      The Tatars are able to work hard, know how to amass wealth and how to live in luxury.
+      
+      Even the most elected of our rich they kick out of the house: "Our floor glitters not for your footprints, Kazakh, left on it with your muddy boots!"
+      
+      There is nothing to say about the Russians. We cannot be compared even with their servants.
+      
+      Where did our boasting, pride for the family, and a sense of superiority over our neighbors disappear? Where is my happy laughter?</p>
+    <button class="btn btn-success" onclick="nextCard('card3')">Next word</button>
+  </div>
+</div>
+
+<div class="card" id="card3" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The third word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer3')">Show word</button>
+    <p class="answer" id="answer3">Why do the Kazakhs look at each other like wolves? Why do not they have empathy to relatives, why is there no truth? When and where from did idleness and laziness come into the blood of the proud steppe peoples? Great sages have noticed long ago: each idler is weak-willed and cowardly;a weak-willed man is always boastful; a boastful man except cowardice is also a fool; and the fool is always ignorant and dishonest. Out of dishonest come the greedy, quarrelsome and talentless creatures, useless in the world.
+
+      That's happened to us. And the reason for this is the removal of agriculture, commerce, crafts and science. We only think how to increase our flocks and herds, provide cattle not only for us, but also for our children. When it succeeds, the herds are passed to the shepherds, and we, newly appeared rich people only eat meat to satiety, drink our heady kumyz, have fun with beauties, and enjoy running horses. If winter yurts are getting crowded, we start to trade or struggle with neighbors, making slander, bribery, blood feuds. The victim also oppresses another neighbor.
+      
+      And one day, a black song idea was born: let the people get poorer more and more, because the poorer people, the cheaper their work, the roomier pastures and the more defenseless their winter yurts. We dream about the impoverishment of the contenders, they want to bankrupt us. So, tell me, is it possible to wish good to each other?
+      
+        We began to feud, fight; we divided into groups and in order to defend our wealth and pastures, started bickering for the power. No one was left out of this vortex. People did not leave their homelands to learn an unfamiliar craft, did not cultivated fields, and did not seek to benefit from the trade. They traded only themselves, adhering to one or to the other party.
+      
+        Thieves did not disappear- they were needed for quarrels. But the best people were slandered, criminal proceedings were initiated against them,false witnesses were selected. And all this was done in order to block the path to the power for the honest. Slandered and humiliated, some of them turned for help to the powers that be, and then the steppe lost another honest son. There remained one way to more proud one - while away his days in prison.
+      
+      Rural municipality governors achieved their position by guile and cunning, and supported the unjust, because it’s better to make friends than feud with similar. Cunning is limitless –impossible to determine who will deceive tomorrow.
+      
+      There is the truth in what the proverb says: «Never judge a man by his actions, but judge by his intentions». It turns out that people have believed that nothing can be achieved by the honest work, but they can get everything through deception.
+      
+        Where is the root cause of this trouble?
+      
+      Rural municipality is selected for three years. The first year flies in the little offenses of the people who elected him, in mutual reproaches and flirting. The second year goes in the fight of the governor with the candidate on his place: to try to win even on the distant approaches to elections.The third year continues in giving promises because everyone hopes to remain in place of the governor for the next period. I see how in this turmoil my people are getting shallow every year and become more immoral.
+      
+      It’s hard to look at them. Why, for example, not to elect a rural municipality out of the people who were educated in Russian? If not, then let the rural municipality be appointed by a county chief or even by the military governor. There will be less work.
+      
+      It would be also good not to elect but appoint the judges for them not to look back at every step on steppe tycoons. There would be less slander.
+      
+      Biys - steppe judges - have already made harm because they have completely lost the good grandfather's traditions. Not every Biy remembers now «old truths», bequeathed by the ESIM-Khan, or «shining path», drawn by Kasym-Khan, or «seven bodies of law» left by the wise Tauke. But they still have to know that their outdated laws and regulations do not respond the spirit of time, prevent new life. Where can we find the wise Biys?There are almost none.
+      
+        Our grandfathers used to say: "Where there are two Biys, four disputes are being born." The meaning of these words is that an even number of Biys will never come to a consensus. I think it would be better to elect three Biys on every rural district, to elect the most worthy and on the constant term. Then the replacement of any of them will be an event and a reminder of the justice for the others. But Biys should not immediately decide litigation themselves. My mind is. Quarreling parties choose one defender, they are joined by a mediator, and these three lead a particular case. If the case will not be solved, one of Biys, which, for example, can be selected by lot, comes to help them. Wouldn’t this be the way to solve many disputes of our lives?</p>
+    <button class="btn btn-success" onclick="nextCard('card4')">Next Word</button>
+  </div>
+</div>
+<div class="card" id="card4" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The fourth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer4')">Show word</button>
+    <p class="answer" id="answer4"> Foolish laughter is a sign of carelessness, it makes so severe headache, as well as tipsy chatter. Carelessness leads to the ruin, the impoverishment of the mind and shameful deeds. I think that people, who indulge in silly laughter, are equally unhappy both in this and that world.
+
+Mind and concentration lead to prosperity and the people possessing these qualities are usually of a different character. This, of course, does not mean that one should always be sad, indulged in bitter thoughts or suffer from every failure. Such a burden is too much for the man. You just need to fall in a reasonable work, but not in the empty laughter. There are different people, and for those who are closed in their grief, struggling in sadness, like a prisoner – work is also the only salvation.
+
+Do not rejoice in evil deeds of people. If you saw misfortune, then let your laughter be bitter. Bitter laughter is always short. Rejoice, when a person does a good deal, for you saw a good example. The meanings of the person’s deal will itself determine how much you will laugh.
+
+But there is laughter, from which I want to warn everyone. It was not born in the chest, doesn’t come from the heart, but only changes the face.It is beautiful and sonorous, this fake laughter, and it has many faces. Throw it away from you, people!
+
+A man comes to life with a cry, dies angry. Not knowing what happiness is people humiliate life with empty affairs. They chase each other, pride themselves before each other, hoard wealth, and when there comes the last hour, ready to give all their possessions for one day of the life. Why does an epiphany come to people so late?
+
+Why from the very beginning not to believe in their destiny and begin to work. Then the scarcest land would give us the fruit. After all, that is its purpose.</p>
+    <button class="btn btn-success" onclick="nextCard('card5')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card5" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The fifth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer5')">Show word</button>
+    <p class="answer" id="answer5">When the chest is full of sorrow, a man cannot control himself, his speech- even more so.
+
+      I saw the Kazakhs, who pleaded: «O Allah! Make us as lighthearted as babies». Why did adulthood turn to be a burden for the Kazakhs? What care has broken them? Their grief can be recognized by a number of proverbs. Here they are: «If you have to live half a day, stock up on food for a day», « The father is a burden to a beggar », « Cattle is more than his life for a man», «The rich man’s face is bright, the beggar’s face is dark »,
+      
+      «The brave and the wolf are fed on the road», «The generous does not have enemies», «Those, who take got used to give back», «That one is right, who owns a prey», «He, who does not honor the rich man will turn away from God», «If you are hungry, ride to the house, where there’s funeral», «Do not live near the  lake, where there is no fish, do not live in the village, which is not aware of mercy».
+      
+      Did they say in these proverbs about the world, science, knowledge, and justice? Who believe that because of cattle such people will not rob the own father? So is the adult wiser than a baby? The child is afraid of fire, and the adult is not afraid of God's punishment. Children, when they are ashamed, ready to fall through the floor, while adults, as far as I know, at such moments, even do not hide the eyes. They are ready to renounce you, if you differ from them. And this is my people, people that I love and to the heart of which I always look for the path...</p>
+    <button class="btn btn-success" onclick="nextCard('card6')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card6" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The sixth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer6')">Show word</button>
+    <p class="answer" id="answer6">Among the Kazakhs there is a proverb: "the beginning of art is in unity, the beginning of prosperity is in life". But what is unity and when is the birth of consent? The Kazakhs believe that unity is the common name for food, clothing, and wealth. But if so, then what benefit does wealth bring and what harm does poverty make? If you have wealth, not only relatives are willing to be united with you, but also foreigners, people of other faiths. People will stop looking for bread on the side. But they will compete with the first whiff of failure, showing their achievements and rights, and then deceive each other. Where is the unity? No, perhaps it’s the unity of the mind, but not wealth.
+
+    "The beginning of prosperity is in life"... Let us clarify what is this life? Carnal? Those, which is called life in the body and is caused by eating and digestion? But it turns a man into a swinger, forcing more than anything else to be afraid of death. Saving his life, he is ready to run away from the enemy and get the glory of a traitor, avoiding labor to become an idler.
+
+    There is a poem:
+
+    Only a parasite or impudent fellow
+    Is always happy when food is ready.
+    He seems to be agile, crud in soul –
+    After all, he used to live without shame.
+
+    It is better to die than to endure such an existence! Spiritual quality - that's what matters in human life. Living soul and a sympathetic heart must lead the man, and then his work and prosperity will make sense.</p>
+    <button class="btn btn-success" onclick="nextCard('card7')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card7" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The seventh word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer7')">Show word</button>
+    <p class="answer" id="answer7">Since the birth the child's life is composed of two different drives. One of them is the need to eat, drink and sleep, without which the body of a child cannot become a haven of soul, will not grow and strengthen. The second – is the desire to know. The child strives to everything it sees and hears: stretches to the shiny subject, tries it to the touch and the taste, seeks a rapprochement with dombra or a pipe, hearing their unusual sounds. As a grown-up, he is interested in absolutely everything: hearing a dog barking or sounds of the evening village, laughing or crying people. The child becomes anxious.
+
+    "What is this? ", "Why is it so? ", "Why do they do this? ". Adults lose rest from all the questions of a child. A person strengthens oneself on the earth, learning the secrets of natural phenomena or making certain conclusions. This distinguishes him from the animal, shows his soul, and tells about the allocation of mind. But why, growing up, do we lose this high desire to explore the world? Why do we, exactly the same way as it was in the childhood, not forget about food and sleep, when we are interested in something unknown? Why do not we go for the ones who create the science and reveal the unknown?
+
+    We had to expand our horizons, to multiply the treasures that were accumulated with an incredible effort at the beginning of the life. A thirst for the knowledge possessed us, and we had to subordinate everything else to the high impulses of the soul. But we could not do it. We roared and shouted, like a crow, and went no further than the aul strife. We landed our souls, ceased to believe in our feelings, contented contemplation, without delving into the essence of things. We justified ourselves by the fact that with others who lived in the same way have not happened nothing wrong yet. Eventually we had reasonable arguments for different reproaches: "Your mind is for you and mine is for me", " It is better to live with my poor mind than to be somebody’s rich mind", "Everybody ought to do his own thing".
+
+    There is neither any heat in my chest, nor any faith in my heart. And the early days of my childhood seem to be more beautiful. That was morning, and we wanted to know everything. Now we are adults. But why are we better than animals that see the world and do not understand it. We also do not know anything, but still we cherish our ignorance and zealously defend our right to remain in ignorance.</p>
+    <button class="btn btn-success" onclick="nextCard('card8')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card8" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The eighth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer8')">Show word</button>
+    <p class="answer" id="answer8">Who among us can follow the wise advice? Who is willing to listen to the admonition?
+
+Biy and the rural municipality are deaf. They would not have tried to get the power if they priced wisdom and wanted to gain mind. But, they consider themselves to be the peak of perfection and believe that they have the right to teach the people. And, of course, Biy and the rural municipality benefit using their power. Having become mighty, as they believe, they just have to make their nation great. How can they afford to listen to the advice of others, and allocate time for this? Position requires them not to get trapped before the authorities, not to aggravate relations with the aul troublemakers, not to allow the people’s worry. They always have to patronize someone, to save someone, and to take someone in a tight grip. Is it easy?
+
+No, the elected representatives of the people are too busy. The rich consider themselves to be the lords of at least half of the world. They do not look down on the ground, their thoughts soar even higher. In their opinion, everything can be bought for the cattle. Even God can be tempted by gifts. Honor, dishonor, reason, science, faith, and the people for them are not as expensive as the cattle. Will such people listen to the good advice? They have to graze and water the cattle and protect them from villains, wolves and weather. This deal requires honest and conscientious shepherds, and this is a great rarity. No, the rich are too busy.
+
+And, of course, thieves, villains and crooks will not listen to the advice.
+
+There remain the poor, who can hardly make both ends meet. How will they annoy them with the necessity to acquire knowledge when they see a great example of the foolishness of the rural municipality, Biys and the rich? After all, the poor man is already full of sadness and sorrow, which are not familiar to these scoundrels.</p>
+    <button class="btn btn-success" onclick="nextCard('card9')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card9" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The ninth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer9')">Show word</button>
+    <p class="answer" id="answer9">I have a strange attitude to my people and don’t understand whether I love or dislike them. If I loved them, then without any doubt I would approve their habits and would find among them at least one worthy of praise. My love would not allow my faith to fade if my people had the qualities inherent to the great people. But I do not have this faith.
+
+And if I did not love, I wouldn’t ask for advice or even speak with my relatives, and would not share my innermost thoughts with them. I just could not communicate with them, and I wouldn’t care about what’s happening among them. I just would have gone. But I could not do even that. In vain, apparently, I consider myself to be an occupant of the earth. With a healthy body, I feel like a dead and do not know what the cause of the devastation of the soul is: whether a vexation for my people, or dissatisfaction with myself, or something else. I'm spiritually dead. I’m angry, but there is no anger in my soul; I laugh, but the heart is not beating with joy, talk, but the words seem to be strangers.
+
+In my youth I didn’t have even a thought to leave my people and go somewhere else, I loved them and believed in them. Now I know the Kazakhs perfectly and do not see any enlightenment ahead. But it turned out that I have not any power to go to a foreign country and start a new life. However, what is this attempt for? Maybe, it is better, when the past does not cause even sadness: I can still live my last days trusting in the future, hoping for a miracle.</p>
+    <button class="btn btn-success" onclick="nextCard('card10')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card10" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The tenth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer10')">Show word</button>
+    <p class="answer" id="answer10">People pray to Allah for children. They want their children to feed them in old age, pray for them, and keep on the hearth. Is that a fair desire?
+
+To keep on the hearth…
+
+Maybe people are afraid of the fate of the accumulated savings? The thought that one will remain without any heir and his property will be left without the owner, probably, tormented not a single man. But why do we worry about it? Why do we cover the eyes with the mist of greed before death? People say: "A good child is a joy, a bad is a grief". Does the man know what kind of child will send him the Almighty? And he asks God to pass on to the shoulders of the son all his sorrows and unfulfilled dreams. Does the son need such a burden?
+
+And do you really need the prayers of the son? If you did good to the people all your life than without a son there will be a lot of sorrowed by your death, but if you deed much evil, than even prayers of your son are vain. People die angry it means that they condemn children to unaffordable deeds. On this earth there was no case that unworthy father was able to behave a son as a great man.
+
+When they say that the son would feed the parents in their old age, it is also wrong. First, one must be able to live to the old age, and it just depends on him. Second, there must be confidence that the son would really honor the traditions of the steppe dwellers. Third, who will refuse to take care of you, my dear man, if you have the full yard of cattle? Loving son cannot also be able to feed his father, if he himself lives in misery, and yet there is still a difference between children who know how to earn for bread, and children, who are able to share the last piece of bread with parents. Praise to Allah, if your son is worried about the poor and needy. And if not? Will you take on yourself the son’s sin, which, daily and nightly praying, you begged the Almighty?
+
+Attempts of people are ridiculous. First, they cheat their child, promising them the toy or the goodies and enjoy themselves when it is possible to occupy baby with this. Then they make them revile their neighbors – because those who are closer become enemies earlier - and again rejoice. There passes some time, and people start looking for the mullah - a mentor who takes not much for study: it seems to them to be sufficient if the son will only learn to read and to write. At the same time the boy is persuaded that the other kids wish him only evil and slander. I want to see what good this guy will do for the people. Do not forget that he was begged from Allah.
+
+People are hungry for wealth. However, they do not pray to the Creator of it, because they know: the Almighty gave them the power to work, and the intelligence to master the science. But the power is not always used for the honest work, and the mind is often wasted in vain. It’s enough to be prudent, to be able to seek and work without laziness, to be wealthy. But people want wealth and use the threats, cunning, begging. And so the honor and human dignity are defeated, and desired wealth is found. Use it to get the knowledge. If you are not able to do it yourself, then let your sons do, for without science, there is any life neither in this nor in that world. Without it your prayers, posts, pilgrimage are worth nothing. But I’ve never met a man, enriched with villainy, then found a good use of his wealth. The prosperity, acquired shamefully, is fragile because it leaves behind only flour, bitterness and anger. I knew some rich, who boasted a tight purse, and then met them insolvent. They did not forget the pleasure of the past, but were not ashamed of begging.</p>
+    <button class="btn btn-success" onclick="nextCard('card11')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card11" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The eleventh word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer11')">Show word</button>
+    <p class="answer" id="answer11">The steppe was filled with theft and instigation. The thief tries to get hold of stealing cattle, and the rich man, as the victim, seeks to return his property with a vengeance. The ministers of justice, of course, rook both the claimant, promising to make him a loss, and the thief, promising him his freedom. The rest tricksters, also, do not want to miss their piece. And they have a great choice: for example they can rat on the thief or help him to escape, or they can buy stolen for next to nothing. Thievery is thriving in the field of incitement. Troublemaker crawls into the houses like a snake, and incite people to litigation. One they whisper about how to become the master, the other how to take a revenge on his enemies, and the third how to stuff their pockets. They don't know the shame and peace, run to the smell of arbitrariness. Those, who are in power, are like that troublemakers. It’s quite easy for them to incite the people against each other, they, like vampires, suck their blood. They are doing it without a twinge of conscience. Ordinary people are languishing from all this mayhem. They fight for the offended neighbor, fight one aul with the other, bleed, then look for allies, sometime they go against conscience, sell the honor of the wife, relatives. With time one could not make out what they were fighting for and what have paid for it. All were entangled in the sticky web of incitement, involved in the theft and forgot about the honest work. Biys have forgotten how to graze cattle, the poor are starving. The concepts of the oath, friendship, honesty and conscience became empty. When will all this end? It would be possible to stop the thieves, but how to tame the rich, multiplying the troublemakers?</p>
+    <button class="btn btn-success" onclick="nextCard('card12')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card12" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twelfth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer12')">Show word</button>
+    <p class="answer" id="answer12">We wouldn’t dare to condemn the man who does one or another thing, remaining pious.
+
+We are impressed with its clean, good intention, and we regret only that this person does not possess the knowledge. It’s not enough to be only God fearing and a good thing if people always remember the two necessary conditions: first - a belief in the power of faith, the second - the desire to know its meaning. If anyone came to believe that he learned the meaning of religion and life, and stopped to learn, let them know - his piety is not real. The men who wear a turban and call themselves as the followers of fasting and prayer, believing this to be the main in worship are worthy of condemnation, because they do not think about the rise of the soul, but only look for satisfaction and peace of mind. There is no true faith without zeal and abstention of its servants, without emotions and fighting for its purity and sublimity.</p>
+    <button class="btn btn-success" onclick="nextCard('card13')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card13" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirteenth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer13')">Show word</button>
+    <p class="answer" id="answer13">Being faithful - means to believe in the power and purity of Allah and accept iman as the teaching of the Prophet about the unity of Allah and life on the earth. There are two kinds of serving to Allah. The first – after taking iman, one knows how to protect and strengthen it with reasonable arguments. It is a conscious faith, and those who perform it can be called preachers. The second- the people become god-fearing after reading holy books or the words of Mullah. This faith is blind, and the vast majority of people confess it. But the true believers, of course, should be recognized of those whose beliefs can affect neither the threat of death nor thousands of sophisticated arguments of different people. It is not hard to guess that such ones should have a fearless heart, an irrepressible spirit, and strong joints. And how can we call those of the faithful who are not privy to the mysteries of science, to preach Iman, and have not so strong spirit to blindly follow the faith? Those who issue black for white, and white for black and do not know the price of the oath? Keep us Allah from such! There is no other faith, except conscious or blind, and he who perverts Iman, should know: he is waiting for punishment. This will manifest the greatness of Allah and kindness of the prophet. Let the people, whose truth fits into the false proverb be cursed. It says: «There is no oath that damask would not cut; there is no sin that Allah would not forgive».</p>
+    <button class="btn btn-success" onclick="nextCard('card14')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card14" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The fourteenth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer14')">Show word</button>
+    <p class="answer" id="answer14">The most precious thing of a man is his heart. The concept of the Kazakhs’ words "courage" and "cowardice" was born from the word "heart."Among the people, batir is called "zhurekti" which means dzhigit - with true heart, a coward is called "zhureksiz" that means the person whose heart is missing. All the best human qualities, such as sympathy, compassion for human grief and humanity are born in heart. Even haste comes from the heart. And there is no lie, when the tongue is faithful to a heart, and if the tongue is lying, then, the heart is simply deceived.
+
+A person with a true heart is obedient to the advice and true to his word; he cannot, like a dog, trail the caravan, and, in contrast, is capable to bring the erring on the right path in the most difficult conditions; he is ready to accept the truth, no matter how it would be difficult for him, and is not able to bow his head before injustice. Such should be a batyr - a courageous and steadfast man, with not a wolf's heart in his chest, but with quivering, human.
+
+The Kazakh is also a human child, and he, like others is fallible. But he makes the mistakes not because of stupidity, but because he lacks hardness to heed the voice of reason.  The heart is guilty.
+
+I do not believe when people say they have committed evil in confusion. Rather, it happens from weakness of will and disregard for the honor.And having learned the taste of evil, people do not immediately release from it. Not everyone can accomplish such a feat. I’ve noticed that dzhigits are often plunged into trouble, by warming them with loud nicknames: strong dzhigit, brave dzhigit, clever dzhigit... But it is very obvious that not only a true dzhigit, but it’s difficult to call simply a man someone who have lost the honour but feels no shame, who lost control and commits indecency.</p>
+    <button class="btn btn-success" onclick="nextCard('card15')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card15" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The fifteenth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer15')">Show word</button>
+    <p class="answer" id="answer15">The difference between the smart and the stupid people seems to me as a kind of measure for comparing the contradictory. Indeed, an intelligent man seeks to benefit people, his ears are open for advice and the memory is a pantry of light sadness. He is always looking for the world's amazing and unusual, and the days of these searches then seem to him to be the most wonderful time of his life. He never regrets of his past.
+
+A stupid cannot find his place in life. He is interested in anything, filling the days with fruitless, pointless ideas. The youth is not eternal, but the fool does not think about it. Surrendering to the fun, he becomes insatiable and one day, too late, understands that the time bent him. It turns out that the best years were spent in dog troubles, and old age blighted by bitter remorse.
+
+The temptation destroys a man. It lights the fire of passion in the blood, and the passion is a disease, because it intoxicates person. Foolish man, surrendered to passion, is like a fool, who, with his nose up, sweeps without a hat on a barebacked horse, covering it with large floors of his robe.
+
+Smart man at this time gets everything without much noise, not exposing himself to ridicule and not losing his head. Anyone who wants to be in the camp of the reasonable must once a day or once a week or once a month realize: how he lived these days, did he make anything good for the people, and will contrition wait for him in the future. After all it also can happen that there will be nothing to remember.</p>
+    <button class="btn btn-success" onclick="nextCard('card16')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card16" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The sixteenth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer16')">Show word</button>
+    <p class="answer" id="answer16">The Kazakh does not really care about his infallibility before the Almighty. He considers being sufficient to do what others do. And he falls on his knees to do a prayer, stands up and bows again. You can be sure he honors God.
+
+It is interesting to compare this with his arguments to the merchant, who came to the village for debt. « That's all I could find - he says - if you want - take it, if you do not want - do not take. I cannot get the impossible just because I owed to you. » Of course, he can get rid of a merchant with such a trick, but the God cannot be fooled. But what is the attempt!
+
+The clue here is more than simple. The steppe man does not want to burden himself with unnecessary troubles, learning and developing language. «That's all I know, - he defends desperately,-I cannot relearn in my old age! ». Or he states with a sincere view: «Just not to be reproached that is not a scientist, but I am not guilty that I cannot speak intelligently, I've got such a language...». And he meanwhile knows that the Almighty gave him quite a good language, the same as to all the people.</p>
+    <button class="btn btn-success" onclick="nextCard('card17')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card17" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The seventeenth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer17')">Show word</button>
+    <p class="answer" id="answer17">Power, Mind and Heart were arguing over who of them is more necessary to the people. Ensuring that they cannot agree, they turned to Science.
+
+- Look, Science! Said Power. - You know that without the hard work either mastery or wealth cannot be achieved. I am the one who preserves against frivolity and shame petty, unworthy of human affairs, from the desire for easy money. I do not give them to lose courage and return them to the right path, even when they manage to stray from it in broad daylight. Look, Science! Working tirelessly and without sleep, people take possession of you, it turns out you owe me your rises. Working tirelessly and without sleep, people become servants of God; it appears humanity owes their lives to me. So tell me, Science, why do these two argue with me?..
+
+Then the Mind noticed: - I determine what is useful and what is harmful to humans both on the earth and in the afterlife. Isn’t it keeping the eternal life? People act on my command, so I know the price of a human strength and understand the language of science. How can you argue with me, if without me people didn’t not know where to look for the benefits, how to protect themselves from harm, how to comprehend the science?..
+
+Did not stand the Heart:
+
+- I am the king of life! Exclaimed it. - I drive the blood through the veins, the soul dwells in me, that's why there is no life without me! I poison the dream of well-fed, lying in a soft bed in a warm house, forcing them to suffer for the poor, the hungry and the homeless. I hold the respect for elders and condescension to the younger. I am justice, satisfaction, conscience, gratitude and compassion. What are strength and mind without me? Only people cannot keep me such, and that’s why become different themselves. But I am the king of life! And my value is impossible to challenge!
+
+After listening to all three, Science said:
+
+- Listen, Power, all that you said is the truth. You just have not mentioned many of your merits; this is also your power. Life is unthinkable without you. But sometimes your abilities turn cruelly to the people. Your grip is hard, and when you support injustice the trouble comes. There is a lot use of you, but there is also a lot of evil.
+
+Look, Mind, you're also telling the truth. There are no acquisitions without the mind. It’s given to reveal the secrets of nature, of life, of the soul, and it’s true that people learn from you about the Creator. You own the mysteries of existence of both worlds, but this did not satisfy you, and you began to multiply cunning and deceit. You know the way to the treasures of both worlds, so both good and bad people began to rely on you. The trouble is that you with the same willingness fulfil the desires of both. You asked me to determine which one of you is of great value for a person. But I do not want to oppose you. Let the lord of all will be Heart. You, Mind, is various and versatile, and Heart will not follow your every decision. It will approve good and obey it with great joy. It will not accept the bad, likely disown you. You Power is mighty and cool, and Heart will not give you will. It will not spare you from good deeds, and hold you from evil. Unite together, and as I have said, let Heart lead you! If this happens, and you will unite in one person, then he will become righteous man. Dust from the soles of his feet will heal the blind. In this- in harmony and purity of human life- is the meaning of the existence of the great world. If you can't unite together, then I shall give preference to Heart - king of human life. That’s how Science solved a dispute.</p>
+    <button class="btn btn-success" onclick="nextCard('card18')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card18" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The eighteenth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer18')">Show word</button>
+    <p class="answer" id="answer18">Clean and suitable clothing suits the man. It is bad when he does not look after himself and his clothes are dirty and wrinkled, but it’s even worse when the person has a passion to dress beyond his means, and he flaunts his attire.
+
+There are two categories of dandies. Some just monitor their appearance: care for the face, paint the eyebrows, continually fix the moustaches and beard and like flirts, play their eyes and fingers. Others extract a certain benefit out of dandyism. A beautiful dress and a good horse for them is a source of livelihood. That is why at the feasts these dandies are always in sight. They are accustomed to praise of senior and sorrows of peers, and rejoice when younger look at them with envy.
+
+All of this is shameful and stupid. A person should not get involved in panache, for having given in to the temptation once; he cannot easily overcome it, and thus will lose his shape. Mind, education, honour and charm make a man handsome and strong. Nothing more. And those one is stupid who wants to rise in another way.
+
+ 
+
+1893</p>
+    <button class="btn btn-success" onclick="nextCard('card19')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card19" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The nineteenth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer19')">Show word</button>
+    <p class="answer" id="answer19">The man does not appear into the world reasonable. He becomes such, listening to people, seeing their affairs, working hard. He slowly begins to distinguish right from wrong, and if he has to go through a lot, he, of course, will become wiser. The man gets his mind, remembering the words of the wise. But any conversation, no matter how instructive it may be in itself will not work. From what is heard, just as we clean grain from the husk, it is necessary to select the truth, which you can use to your advantage. That’s how the human mind is polished. But there is another side of this process. If a person is snobby and cannot ask the sage again about the unclear thing for himself or, if he is careless and having crossed the threshold, he immediately forgets what he’s heard then what is the use of listening to the wise words? He turned to be careless and stupid man, unable to appreciate the mind. Probably, the wise man said of such people: «Instead of teaching people who don’t understand the words, it is better to feed pigs, which recognize you. »
+
+ 
+
+1894</p>
+    <button class="btn btn-success" onclick="nextCard('card20')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card20" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twentieth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer20')">Show word</button>
+    <p class="answer" id="answer20">The fate, as you know, cannot be changed. And the fate, among other things, is given to the person to experience the feeling of repletion. This feeling is intrusive and, knowing it once, it’s not easy to get rid of it. It can be discarded, having gathered all your strength, but it is sure to come back and eventually overcome you. There is any thing that will not annoy not only a smart, but also however thinking person. Everything becomes boring: the food, and games, laughter and praise, outfits and feasts, and friends, and even women. The person finds a flaw and confusion in everything, cools down to his former, which seemed strong, feeling of affection. The world is unsteady, manpower is unreliable, and life is deceptive. Permanence is not given to any living being. How can we blame a person of the variability after this? Most often we meet the abundance among the clever people who saw a lot on the century and felt bitter shame for folks more than once. I think people get tired of the transience of happiness. And at such moments, I particularly feel that the fate of stupid and careless people is similar to luck.</p>
+    <button class="btn btn-success" onclick="nextCard('card21')">End of Words</button>
+  </div>
+</div>
+<div class="card" id="card21" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-first word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer21')">Show word</button>
+    <p class="answer" id="answer21">You can’t be saved from the praises. Some are praised for not boasting themselves. These people have the high name. They consider themselves to be beyond any praises and care most about how to avoid of being branded as stupid, thoughtless, shameless, spineless and useless. They are afraid of being branded as liars, extortionists and gossips, considering the carriers of such qualities to be ignoble people, and, of course, put themselves above them. This is the property of smart and conscientious. For them it does not matter that they will not be praised, but that they will not be classified to the category of miserable.
+
+ Others, conversely, are doing their utmost to deserve flattering comments. They are happy when they are patted on the back and called batyrs or daredevils. And the strange thing is that they don't want to hear bad words about themselves, preferring to remain deaf. This is the real boastfulness, and those who possess it can be divided into three categories. First seek the praise that would impress even strangers. Representative of this kind of boasters is, of course, a fool, but at the same time is a person.
+
+The second achieve praise to shine among their people. We certainly have a deal with a fool and a defective person.
+
+The third, like the cheapskates, scrape praise that will be appreciated at least in their own home. These are, of course, from the kind of idiots.
+
+And what is also curious. Anyone who wants to be visible in the eyes of the enemy is seeking to be raised on the shield by people. Anyone who wants to be worshiped by people covets praises of his compatriots. And among close relatives a bouncer is his own judge and, of course, raises himself up to heaven.
+
+1894</p>
+    <button class="btn btn-success" onclick="nextCard('card22')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card22" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-second word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer22')">Show word</button>
+    <p class="answer" id="answer22">Who among Kazakhs is worthy of respect and love? Biys cannot be honoured because there are no such. Biy should be independent, and those whom we see today, are not free to dispose of even their own wealth. Feuding with an opponent, the rich man hires a hundred of dzhigits for protecting and pays cattle for their service. He silly believes that does so willingly. No, he does not reward them by kindness, or in gratitude for the service. The nature of the rich man is that he carries the discord and strife, he produces rogues and the knights of the night, and in the end the reckoning day comes: the rich man becomes their victim and humiliatingly gives away his possession.
+
+There are no real Morzalar, hereditary nobles, left. The word "Morza" is popularly understood as "generous." So, now you will not find generous, and when you throw a stone be sure to get into morza the one who only knows how to give and take bribes. That's really true: «Those who take gets used to give...»
+
+The present morza is not worthy of respect. You can honour Biys and rural municipality leaders, but they got their power not from God. They have bought or begged it. How then force ourselves to bow the head before such?
+
+It’s pleasant to honour the strong people, but there are none among them rejoicing for good deeds. And strong in bad things were enough at all times. Do they worthy of human love? I want to respect the clever, but cannot find noble and conscientious in the steppe. People always had mind for cunning and deceit. Do they worthy of human attention? I would have respected the unlucky stubborn people, poor and helpless, but sometimes not out of timidity they do not dare to sit down, even on the lying camel. If they had the opportunity they would grab something while the camel is rising. There remain sly fellows and the scammers, but they do not calm down until they lead you to the grave. They don’t need you. So whom to worry and who to love on this earth?
+
+ It goes that only the meek, who follows the proverb: "Who is hungry for happiness avoid litigation." They suffer from humiliation of thieves and crooks but still remain bad even when they give their own vital property. The fate taught them to give one half of their wealth without complaint to save the second. You will not find more modest people in this land and maybe we should wish them well-being.</p>
+    <button class="btn btn-success" onclick="nextCard('card23')">End of Words</button>
+  </div>
+</div>
+<div class="card" id="card23" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-third word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer23')">Show word</button>
+    <p class="answer" id="answer23">A person has a special joy and one consolation, that doesn’t make him honour. This joy is following: he finds a bad person among the people, sees someone’s evil act, which he would never make and feels himself over the moon. «Save us Allah from being like this! -He says, not without pleasure. -And he considers himself to be a man. Am not I pure in comparison with him? Am not I effulgent? »
+
+But did God say to him that it is enough to be better than a bad man? Where is that brightest head, who convinced him that he's good only because there are unkind and fool people in the world.
+
+When distributing prizes at baiga, in which one hundred horses were attended, what is the use to ask the fallen behind how much he overtook? What is good in that five or ten horses who came after him?
+
+Is a person's worth determined by comparing him with the bad people, not the best of the best? A man often finds consolation in the fact that the others live as he does. «There is nothing to be ashamed if I do not stand out among the people - he says with a light heart. – Toy that we celebrate with each other is the greatest Toy. Praise God for the solace. »
+
+But did Allah tell him that it is quite enough, if he does not fall behind the crowd? Or told him that he, the Almighty, does not punish the crowd?
+
+ Who knows, is the science driven by one person, or it belongs to all?
+
+Who will answer - is the mind the body of knowledge of many or spiritual power of one?
+
+And does not an errant crowd require only one person, the clairvoyant?
+
+Which is easier: when everyone is sick in the house or half of the family is healthy?
+
+What is better in the way: when all the horses are exhausted or when half of them are not able to continue the way?
+
+What is better: when all the people are ruined from jute, or some part of them?
+
+So why does a fool take comfort in the existence of brainless fools?
+
+Will the groom convince the bride, if he says that he has bad breath only because in his family all smelled so? Hardly the bride will be satisfied and will say to him: «Be like all your kind, and don’t stand out among them».
+
+1894</p>
+    <button class="btn btn-success" onclick="nextCard('card24')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card24" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-fourth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer24')">Show word</button>
+    <p class="answer" id="answer24">The earth inhabits more than two billion people; the Kazakhs are about two million[1].
+
+The Kazakhs seek their own way to wealth, knowledge and mastery of the craft, and their own way to make friends and enemies.
+
+They have their own idea of boasting and strength. The Kazakhs differ in everything from the other nations: stalk each other keeping watch over, feud with each other, without going to sleep, rob themselves. But in the world there are the cities with a population exceeding three million people, and lots of people bypassed all the land three times can be found.
+
+Why we are not interested in the lives of other nations? Are we destined to be at loggerheads with each other?  Do we have to be a laughing stock in the eyes of the world? Or, maybe, there will be a day when stealing, lying, gossip and hostility will disappear among the Kazakhs, when the Kazakhs will learn how to multiply their flocks by honest means and they will learn the art and craft of other nations, when they will possess the knowledge? I cannot believe in that when I see how two hundred people crave for a hundred heads of cattle, and I know that they will not stop until they destroy each other.</p>
+    <button class="btn btn-success" onclick="nextCard('card25')">End of Words</button>
+  </div>
+</div>
+<div class="card" id="card25" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-fifth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer25')">Show word</button>
+    <p class="answer" id="answer25">It’s good to educate children, but in order to serve their people, it is necessary to teach them their native language. On our earth this becomes almost impossible. Now people try to get rich first, and then to educate children in Arabic and Persian. It is not easy for a hungry man to keep prudence and honour, even more difficult to maintain a constant commitment to the sciences. Poverty and, as a consequence, enmity with relatives often leads people to a trouble: a man is drawn into the theft, resorts to violence and deceit, gets used to trickery. Only when one is free from worries about a piece of bread, he feels the need to knowledge and culture and instils this thirst to his children.
+
+It is necessary to master the Russian language. The Russian people have the mind and wealth, developed science and high culture. The study of Russian language, study in Russian schools, and the mastery of Russian science will help us to adopt all the best qualities of these people, for they had guessed mysteries of nature earlier than the others, and we’ll avoid their vices. To know the Russian language means to open your eyes to the world. Knowledge of a foreign language and culture makes a person equal to these people, he feels free, and if the concerns and struggle of this people are close to his heart, he can never stay away. This is a human nature. But there are a lot of people, who try to achieve mercy of the strong and knowledgeable, groveling before them. These ignorant people are able to sell their father and mother, relatives and friends, faith, and honor if they would be favorably patted on the shoulder. In order to bring a smile to the face of a Maj.[2], any of them are ready to bare the ass.
+
+Russian science and culture is a key to understanding the world, and having got it, we can actually make life easier for our people. For example, we would learn different, but at the same time fair ways of getting sustenance and we would instruct children on this way: we would be able to protect villages from the unfair Imperial laws; we would fight for the equal status of our people among the great nations of the earth more successfully. It hurts because the Kazakhs, who educated their children in Russian, strive to use their knowledge in order to enrich themselves at the expense of their own tribesmen. Parents together with their families and relatives spoil the children. And yet these children are far superior to the illiterate, for their possibility is extremely high. I think it is simple to make them to work properly, so that they will benefit. Prosperous families are reluctant to send their children to school, the children of the poor are forcibly sent to the Russian schools. That's why we do not see today any noticeable person among the educated people.
+
+Sometimes relatives, quarreling with each other say: «Than bear a grudge against you, it is better to send a son to the soldiers, to grow hair and stop to shave». Because of the offense they are threatening to take shape and the custom of other nations. How can children become greater people, even if they will learn? I've never seen yet children persistently and thoroughly mastering the knowledge: we do it superficially, in fits and starts. Some Kazakhs, for example, hardly agree to send their children to school, even when the cost for tuition carries community.
+
+ The path that I propose excludes the love of wealth. Do not hurry to marry and to send a son in a separate family, but teach him first in the Russian school. Donate all of your property, if it is required for study. Nothing should be spared in order to make a person out of your son. You will not be calm, if your son remains ignorant; will not be happy and useful to the people. For such a son you are to feel the eternal fear before the Creator and the eternal shame before the people.</p>
+    <button class="btn btn-success" onclick="nextCard('card26')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card26" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-sixth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer26')">Show word</button>
+    <p class="answer" id="answer26">The Kazakh is glad to madness when in difficult baiga his horse comes first, a wrestler-countryman wins, when a falcon grown by him successfully beats a bird, and his beagle beautifully takes a beast. He is sure that for him there is no greater joy in life. But can there be such a big joy caused by the advantages of one animal over the other or human superiority over his rival? And then, neither that enthusiastic man nor his son won the tournament of fighters, and they not themselves came first on their horses. It turns out that this joy is fleeting and stalls within its people. It brings bitter thoughts. It turns out that the Kazakhs have no other rivals and enemies than the Kazakhs themselves, and the victory in the insignificant competitions only makes them annoy each other. And is it possible to raise to the rank of valor the evil deed to the neighbor? Wishing harm to another conflicts with Sharia law, and harms your own and other household, goes against reason. And it’s bitter because someone accepts defeat of his horse as his own, and is ashamed of that failure.
+
+Not only have the Kazakhs had frisky racehorses. The hunting birds and a hound dog may be the property of all: today they belong to one, tomorrow to another; strong dzhigits are also born in different auls. The victories of a fighter in the tournament are not constant, and falcons and hounds are not always in a good shape. What is there to be ashamed? And I have met people who are ready to sink into the ground rather than to see the defeat of their native aul in competitions. From this I conclude that the ignorant people rejoice in what should not be pleased. And they are so happy that just lose their head, as if drunk, speak and don’t understand the meaning of the words. And they are ashamed of what absolutely should not be ashamed, and lower their eyes when, on the contrary, they have to raise a head proudly. This is the fruit of ignorance and stupidity. When you tell such people about their unhappiness, they agree with your argument. «You're right, they answer, right, what is here to interpret». I don't believe them, because I know that tomorrow they will do the same. It is impossible to prove to these people all the falsity of their customs. Even when you manage to persuade them, they cannot change. They are like animals, not changing their habits. Only a strong fear or death eliminates the weak from the shame. For example, I have never met people who would return to a reasonable life, easily throwing bad inclinations, who would sincerely admit the guilt before themselves and willingly followed the mind.</p>
+    <button class="btn btn-success" onclick="nextCard('card27')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card27" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-seventh word (according to Socrates)</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer27')">Show word</button>
+    <p class="answer" id="answer27">One day the great philosopher Socrates started a conversation with a scientist Aristodim, his student, about the people’s divine service to Almighty God. Aristodim did not recognize God and laughed at those who worshiped the Lord's will.
+
+- Hey, Aristodim, are there any people causing your admiration for their creations?-Socrates asked his student.
+
+- As much as you want, revered teacher - he replied.
+
+- Name me at least one of them.
+
+- I admire the grandeur of the poetry of Homer, the tragedies of Sophocles, or rather his art to transform and understand the state of mind of others, the paintings of Zeuxis. He named a few more gifted men, whose names were widely known at that time among the people.
+
+And again Socrates asked him:
+
+- If so, who is more worthy of admiration: God, who created human beings, making them the crown of all living and sentient, or artist, who creates though with a unique skill, but nevertheless only the lifeless kind of person?
+
+- Almighty - said Aristodim. - But this is true only when we are not dealing with the random of his creations, but with those of them that he created reasonable.
+
+- But people know a lot of useful things, there are a lot of different situations in the life, there occur understandable and unexplained phenomena in the nature, -replied Socrates. -What is still more surprising, Aristodim: those things, situations and phenomena, meaning and usefulness of which are not covered by a veil of obscurity or vice versa?
+
+- I think the only reasonable thing is that, which was created for man's benefit, -replied Aristodim.
+
+- Well. You will agree, of course, with the fact that the peak of the creations of God is the man. But didn’t the Creator endow him with five senses, being completely assured in their necessity for a man? Can you find in man casual, unreasonable organs?
+
+For example, we have eyes to see. If we did not have them, how could we admire the beauty of the world? The eyes are gentle, and in order to save them we have eyelids: they open and close the eye when it is necessary. Eyelashes protect the eyes from the wind and the motes, and eyebrows put away the sweat trickling down from the forehead.
+
+If there were no ears, the man would not hear either noise, or rumble, wouldn’t keep his ears open against rustle or cry, and would not enjoy the sounds of the songs or melodies. If the nose did not feel smells, a man would not like the incenses and would not run from the stench. He would not care.
+
+ Finally, if a person didn’t have the palate and the tongue he could not taste the sweetness or bitterness of food. Is all this not good for the mankind? The eyes and nose are located near the mouth to see the purity and to feel the smell of the food. Other holes, spewing dregs of the body and however, necessary for the body, are located away from the head, from the noble organs of knowledge. Is it possible to say that all this is the accidental manifestation of the mind of Creator?
+
+Aristodim thought and then he admitted that Creator of the world has the highest wisdom. Aristodim didn’t doubt any more that the Almighty created man with love.
+
+- Think Aristodim – continued Socrates. - All living things love their babies, do not leave them to their fate, but protect and grow. All living things multiply - this is the basic condition of life, because it is the only way to confront death. Do not these aspirations of living beings say that God created them lovingly? Love, as you see, is also given by the Almighty.
+
+- Hey, Aristodim! How can you assume that the mind is only yours, a man’s, domain? Is the human body not like a grain of sand of the land on which he walks? Does the sweat, which is released from the human body, differ from the Earth's water drops? So where did you take a special mind? I know how you will answer: "First – you’ll tell - there was a soul and then came the mind." And here you have a soul and a mind. What is of it? You saw the world and made sure that everything in it is created advisable and everything fits and obeys certain laws. But you were not able to reach the immensity of the world. You're amazed with the majesty and the inaccessibility of its truth just because your mind is small. That's why you try to learn it. So how did it arise? What lies at its source? Does it the atom or some kind of intelligence, as boundless as its creation?You can exclude the mind. But even then, this world, not accessible to any measures or calculations, arose not spontaneously, but as a natural movement of life, not by itself, but for the possibility to live in it. And all the relationships in the world must be subordinated to the incredible laws of beautiful.
+
+- Everything you’ve told me is the truth - said the scientist. - I repeat that I agree with the fact that the Creator is the bearer of a higher intelligence. I have no idea to doubt his greatness, but why he, the Almighty, needs my service to him in my prayers?
+
+- You're wrong, Aristodim. He does not need your prayers. But you are a debtor, as he takes care of you.
+
+- How do I know that he cares about me?
+
+- Look at all the animals and look at yourself! - exclaimed Socrates. - Life is given to everyone. But are all living creatures given the warmth of the soul, spirituality and enlightenment? A man proposes the future, tries to comprehend the real days of his life, and thinks about his experiences. An animal vaguely understands his past and present, and it does not understand the future at all. Look how difficult are the people and what are the animals? A man leans on two legs and grows straight up: he can see the whole world, can make sense of it, can command the animals, and subordinate them. The animals are not able to use consciously the power of other creatures: some animals rely on their quick feet, others - on strong wings. Nothing good would have happened if a person didn’t believe in himself or his body was like the body of an animal. And exactly the same nonsense would be if the animal had a human mind, because the body of the animal and its physical organization do not comply with the spiritual manifestation of the mind, do not correspond to the purpose of understanding of art, learning medicine, mastering of science. Where would, for example, the ox build a great city, make the tools, forge the weapons of war? How will he do this? Even if he will be given an exceptional mind, where the ox will take the necessary skill and dexterity? A man is the only who has the extraordinary power - intelligence, amazingly proportioned body and this combination determines his versatility and high talent. Is a man not the king of all living creatures on the earth? And if he is the supreme creation of God, doesn't it mean that a man was awarded his love? How can a person, even if he is the greatest scientist on the earth, how can the human race not to be grateful to the Creator and not to consider themselves to be his eternal debtors?-ended Socrates.</p>
+    <button class="btn btn-success" onclick="nextCard('card28')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card28" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-eighth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer28')">Show word</button>
+    <p class="answer" id="answer28">Hey, Muslims! Why life is such that some are rich and the others are poor, some are sick and the others are healthy, some are smart and the others are stupid, some prone to good, while the others prone to evil deeds?
+
+When you are asked about it, you humbly respond that this is supposedly the will of the Almighty.
+
+But we took iman and became faithful, believing in justice, infallibility and perfection of Allah! How can that be? Allah gives cattle to perjurer, but plunges into the abyss of poverty an honest, diligent in prayers worker never giving him a joy to see the fruits of his labor and the possibility to feed the family. He gives good health to a thief or scammer but brings hard disease to an innocent quiet man.
+
+ Out of two children of the same parents one is created to be smart, and the other is stupid. He had seemingly suggested the only way, calling all humanity to be honest and fair: he promised to take to heaven the honest and send to hell the dishonest. But only Allah commands the human soul, and so he sets up one for good works and pushes the other for a sin. Does all this show the infallibility, mercy and justice of the Almighty? The people and the property of the people are in the hands of Allah. What does he do? He disposes of his property to his own liking. Since all from Allah, then what remains to the mere mortal? What can he do himself? So, there is nothing for people to take offense at each other, for the one who does evil, and those who do good will equally expect to the will of Allah. And if it cannot be called a vice, then does not that mean, that the Almighty still has flaws, which we have not dared to say? The Creator considers it necessary that every intelligent should be pious and every pious should obediently fulfill the requirements of the iman. Let's try to give free rein to mind: after all, any right thing should not be afraid of testing it.But then what will be left of the requirements of Allah, that each intelligent should be pious? Where will his words disappear: "You can know me only by your mind"? When are there unreality and deception in a faith, how to make yourself not to think about it? This means that religion appeared there, where once the mind has stopped! And, therefore, blind obedience will lead to nothing, until we bring iman at least to the similarity of perfection. But now we are too far from this, but we still believe, that you, Allah, have created good and bad, but not you make the people do good or evil; you, Allah, have created the diseases, but do not you make the people suffer from them; you, Allah, have created the luxury and poverty, but not you turn people into rich or poor. Otherwise it is impossible to understand you.
+
+1895</p>
+    <button class="btn btn-success" onclick="nextCard('card29')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card29" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The twenty-ninth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer29')">Show word</button>
+    <p class="answer" id="answer29">The Kazakhs have a lot of intelligent, practical proverbs, but there are those that do not withstand not only God’s, but also human evaluation. They say: «Be poor, but do not lose your honor. » It is rightly said. For, having lost the honor, a man condemns himself to a miserable existence. There is nothing humiliating if you are called on a grave, painful, but honest work. Not everyone is fearless, and will respond to the call. Worthy take the path of struggle, unworthy choose idleness and begging.
+
+They also say: « The snow can be kindled by skills »; « You can get everything skillfully asking ». These proverbs deserve God's punishment. Is not it better to ask the land for prosperity, or hope for your work rather than live in humiliating search of words that can soften the miser, or puzzle over how to "kindle the snow". There is a proverb: «If you're unknown, then fire the field». But what is the use of fame, extracted out of a crime?
+
+There is also such proverb: « It’s better to be like bura[3] during a day, than to mooch like emasculated camel for a hundred days». But what's the use of a one-day mad passion which bends your body?
+
+They say: «Gold will lead astray even an angel. » I sacrifice these people for the sake of the holy name of an angel. Knowing that angel doesn’t need gold they want to justify their cheating, born of envy. «Wealth is sweeter than father and mother, but life is more expensive than house full of gold». Is a rascal, for which wealth is more expensive than his parents able to appreciate his life? Of course not. But what a dirty trick - to change the father and mother for the wealth! Hardly or easily, but the parents acquire cattle and property with only one thought: to leave to the children.And, selling parents for wealth, a person commits a crime against God. We have to be extremely careful in dealing with proverbs, born by ignorance of people.</p>
+    <button class="btn btn-success" onclick="nextCard('card30')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card30" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirtieth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer30')">Show word</button>
+    <p class="answer" id="answer30">The Kazakhs say: « You will not take over even one hill on forty nags ». The splurge also does not go far. What for is the splurge to people what is its use? Bouncers don’t have any conscience and dignity, the ability to great affairs and lofty thoughts. You will not find courage of batyr or humanity in them. "Oh, stop it! - They dismiss of advice. - Why are you telling me about the others? We’ll see who is better and whose head will be strapped to the saddle. Maybe I owe my success to someone? Maybe someone puts meat in my pot or give me livestock for milk? » Or, in a frenzy beating his chest, sway from side to side: «Do I sorry for my life? I'll be damned if so! For this cause I am ready to go to be shot or be exiled. The death is one! You will not escape! » But I have not seen a Kazakh going after these words to death, as well as I have not seen a Kazakh who would admit that he is not able to die with dignity: everybody just poke fingers in their small Adam's apple and threaten: «I will, indeed, and that is all! » If one carried out this threat, then people would be surprised at resolution of a fool. But what can we say about the people who do not know where to hide when trouble comes? Those who expect to convince others with assumed hysterical cry. Who is counting on naive and is able to achieve such words about himself:«Leave this kafyr alone. How would he really not done a mess». Oh Allah! Can not we see man’s spiritual richness, if he has such, his faithfulness to the oath, generosity and other good qualities? There is nothing to listen to dishonest and unscrupulous people about whom they say: «Shameless’ cheekbones do not get tired».
+
+1895</p>
+    <button class="btn btn-success" onclick="nextCard('card31')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card31" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-first word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer31')">Show word</button>
+    <p class="answer" id="answer31">In order to remember the tips and to follow them, you need to meet the following four conditions. First, you have to be strong enough to suppress any pride, when they give you advice. Second, it is necessary to accept wise words with heart and soul as if you quench your thirst. Third, you should repeat the heard several times to yourself to lock it in memory. Fourth, it is necessary to keep away from the things that wear the human mind out and cause it to lose its valuable properties. Such things, by the way, are also four. They are the thoughtlessness and carelessness, banter, melancholy and addiction to any vice.</p>
+    <button class="btn btn-success" onclick="nextCard('card32')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card32" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-second word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer32')">Show word</button>
+    <p class="answer" id="answer32">It is known that only the one who is thirsty for knowledge masters the science. But one desire here is not enough. Even the learning process should be governed by a particular system. Otherwise, the search and the whole vast work of the person that was spent on the acquisition of a science can be wasted. First you have to understand for what exactly you need the science. Not for enrichment or acquisition of expensive things, not for the deal that will bring you profits or position in society, strive to science. If you're passionate about it, then you will be rich for your every opening, for the removal of any slight gap in your knowledge. What could be more valuable than such an acquisition? And is there the pleasure higher than that which you have experienced with this? You’ve got a love for science, and it, as any love, is insatiable - and then you go to a new work and searching. This love, in other words is a thirst for knowledge, it helps you to remember what you have seen and heard, to assimilate it and to fix it in your memory in the clear, figurative art forms. If your soul lies to other things and you study science for achieving them, then your attitude towards the science is like an attitude of the stepmother to her stepson. You have to love the science as a mother loves her son. Then the science will answer you in return, will be more accessible. The Enlightenment should not be an aim in itself. This leads people to competition with each other, creates unnecessary, stupid bragging. Any of these things brings harm to science and society. Even if disputes are meaningful and sharpen the mind, anyway excessive adherence to them is destroying man, because he starts to argue for the sake of not getting at the truth, but in order to defeat the opponent. The science in such cases remains aside, the main for such a "man of science" becomes his attempts to confuse the other one and make him a victim of false truths. This is similar to the case of steppe troublemakers have already been mentioned before! The man, who misguided a hundred people in a dispute, does not cost the little finger of one who brought to the truth to at least one errant. The debate is necessary in science, but at home it creates the envious and the aggressors able to lie, slander and assault. Reaching the truth, do not give it up, even under the threat of death. This truth is real; it has just captured, subdued you, and has made you really stand for it to the death. Otherwise, you cannot convince others in it. What is the use of your truth, if you are not devoted to it? People will not accept it. Do not be jealous, revengeful and frivolous, or your studies will not benefit. In the nineteenth word of edification is said about the indifference and carelessness and how these flaws prevent people from becoming reasonable. Remember, wherever they rule, there is no God, no people, no economy, no honor - all the things for which the science exists. And the last thing I wanted to say. In order to save your knowledge and understanding, you need to have a character, a strong character. It is appropriate to compare it with a vessel that stores precious moisture. Indeed, why should you acquire the knowledge, if there is no place to store it? Therefore you need to be persistent; you should always keep firmness of spirit. Strong character is unthinkable without the will, which helps a person to ensure what he seeks to, and does not allow him even a moment of weakness. So, the firmness of spirit and the will are the basis of the character. Let them serve human mind and honor.</p>
+    <button class="btn btn-success" onclick="nextCard('card33')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card33" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-third word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer33')">Show word</button>
+    <p class="answer" id="answer33">It is necessary to learn the craft to live in abundance. Cattle die of jute and craft does not depend on natural disasters. Craftsmen who works up a sweat and sells what he did with his hands, can be considered to be the best of the Kazakhs. But among them, the few Kazakhs craftsmen, like an incurable disease, there are vices. First, these men do not seek to master a new craft. They are not looking for the masters better then themselves, do not approach each other, do not work with them hand in hand in order to learn their art, they are content to what they know, as if the whole world keeps only on these masters. And according to the age-old bad habit of the Kazakhs they indulge in empty contemplation, lie on their ribs, criminally killing the precious time. Secondly, they do not know how to work hard. Earning a few head of cattle they begin to imagine them rich and boastfully think: «Don’t I have enough cattle? » Such thought is enough to people to be indulged in idle laziness, carelessness and dandyism. Third, these people do not beware of flatterers. And they will not fail to appeal to the craftsman with a sly request: «You are free in your actions, my light, and you're the most skilledmaster in the neighborhood! », or« Aga what is for you to fulfill my request? You have once to spit, and I will be happy! » Not everyone can stand hearing such words. And if the craftsman succumbed to temptation and imagined himself as an irreplaceable wizard, then he has no control over himself any more. He will spend all his time for the performance of everyday, not requiring special skills orders of flatterers. Fourth, the Kazakh craftsman likes to make friends. And most of all, he is in the company of dishonest people. Cheaters make friends with him, present some little thing to him, promise mountains of gold or their patronage, and the craftsman is glad to death that he had found a true friend, and also tries to serve him. He climbs out of the skin in order to make pleasant to a friend and does not notice that he was cheated. So the days pass, the family and daily bread are forgotten, the debts grow, and there comes a time when he is forced to borrow from one to pay off with the other. Now the poor fellow is obliged to work to make ends meet. But the endless orders of "friends" that he performs as the gift bring him into trouble: to poverty and totally dependent on fat cats. Why is this happening? Who knows? It is strange that the Kazakhs, who are able to cheat anyone, are so easily deceived themselves.</p>
+    <button class="btn btn-success" onclick="nextCard('card34')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card34" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-fourth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer34')">Show word</button>
+    <p class="answer" id="answer34">All people know that they are mortal, that death comes not always in old age and that after death no one is resurrected. The Kazakhs also believe that. They also believe that there is the Almighty, the Creator of the world, and he will arrange the court, after the ending of the world, he will punish for sins and reward for good deeds, and that his punishment and retribution will not be similar to earthy. In their opinion Allah may cruelly punish a man and raise unimaginably high. So why, knowing these two obvious outcomes of human life, the Kazakhs does not do only good? Why are they restless and why is it uncomfortable for them on the earth? The reason lies in their insincere faith, which must have arisen and exists now only because they, like all the nations, recognize the afterlife. But if faith of the Kazakhs is questionable, how can they call themselves true believers? And who can instruct them on the path of truth? Anyone who wants to avoid the torment in that and in this world must know: there are no two joys, two concerns or two sorrows in one soul. It's an impossible phenomenon, because for the present Muslim earthly cares and joys cannot be more significant and more bright than heaven ones, those that expect him after death. But the Kazakh, faced with a choice between two things, one of which is desperately needed for the earthly life, and the other is required for the afterlife - would undoubtedly take the one for his earthly existence. He chooses, knowing that everything in this life is fleeting, and you should never miss a chance. He trusts in the mercy of Allah, in his forgiveness. He relies on luck for the next time- that’s when he would take everything that is needed in the afterlife. How would he prove then that he hasn’t changed Allah for the Earth's life? I imagine all of us to be such a Muslim. The man is a child of humanity. That’s why your birth and maturing, your aspiration to wealth or the feeling of hunger, your sadness, the way of life, your constitution, finally, your death do not differ from the nature and the destiny of any other person. You, like everyone else, go to the grave, and rot; know that you're also waiting for Judgment Day; your fear of troubles and pleasure of gifts of both worlds are the same with feelings of your kind. And does life seem to you longer than five days? And if that is true and the people are each other’s guests, if you are a guest of this world, then why do you strive to reveal what is known to the other, and what is not? Why do you envy other people's prosperity and happiness, interfere with another’s live? Why do not you ask Allah to bless you for the honest work, but beg him to take away and give you a wealth of others? Why should the Creator humiliate another person for your sake? Why do you try to prove your rightness if you are not sure, that it does not turn into falsehood? Why do you have to puff out your chest, not being able to connect even two words? How will Allah help you? Let us put aside faith, and not talk about what kind of Muslim you're. Are you a man at all?</p>
+    <button class="btn btn-success" onclick="nextCard('card35')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card35" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-fifth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer35')">Show word</button>
+    <p class="answer" id="answer35">They say that when the world will end on the last judgment before God will appear all Hajji - pilgrims who visited Mecca, the mullahs, the Sufis, Shiites - warriors-righteous and generous. The scriptures say that generous, as well as clergymen, would go to heaven. But on the Judgment day people who have become Hajji, Mullah, Sufis and Shiites or were generous just for the sake to enjoy the honor and respect of the people, they say, will be collected separately from those who received these titles by selfless service to Allah, devoting their lives to only one - piety. And the Creator would be the first to say: «You became on the earth Hajji, Mullah, Sufis, Shiites and generous to be worshiped by the rest of the people, calling you «respected Hajji », «honorable Mullah », « esteemed Sufi », « unforgettable Shiite», «incomparably generous». It demanded from you considerable art. But you have lost all this. The world you have created in a joint effort collapsed, and with it the strength of your power came to an end. There is another world here. Do not wait for the usual honor, hold the answer. I gave you a life. What did you spend it for? I gave you wealth. What did you use it for? You tirelessly spoke of God's judgment, but always insincerely, you preached faith in God, but always without diligence. You lied to the people. This is what lives and wealth are spent for! » And the Creator would turn to those who have devoted their lives to him: «You have sacrificed everything to become my true servants and earn my gratitude. I am pleased with you. Enter the monastery, it is open to you. Your friends are also worthy of mercy and though they could not become my servants but they treated you with compassion and concern. Show them to me if they are present in this judgment». They say, this is waiting for the people in the terrible Judgment day.</p>
+    <button class="btn btn-success" onclick="nextCard('card36')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card36" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-sixth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer36')">Show word</button>
+    <p class="answer" id="answer36">In the hadith-the Holy book- the following words of the prophet Muhammad are written. «That who has no shame has no faith». The Kazakh proverb says. «Anyone who knows how to be ashamed knows how to be faithful. »From these words it is clear that shame - is one of the sacred senses. So what is the shame? There is a shame caused by ignorance of people. It is similar to a confused boy, who does not dare to utter a word before the adults, or other adult’s timidity, who does not dare to meet with a famous person just like that, without specific affairs to him. Such people have guilt neither before God nor before their conscience, but they cannot release from the will of ignorance, they complicate everything, and are ashamed of what they should not be ashamed. The real shame is that caused by the actions contradicting the faith or mind, or defaming someone's good name. It can be of two kinds. The first - is a shame not for your faults, not for yourself, but for the other’s affairs. It is caused by the pity for this man. The feeling of wonder and disappointment for his misdeed, anxiety for his fate makes you suffer. «Why did he do that? – You worry for him. - Why? And what will happen to him? » Compassion motivates your thoughts. The second - is a shame for your misdeed that you have committed due to a misunderstanding or too carried away with something. And though at that time there was no one nearby, but you realized that your misdeed has humiliated your dignity or defamed someone's good name - and you are tormented by the conscience. You condemn yourself, lose rest, and dare not look in the people’s eye. People are suspicious in such cases, they lose sleep, stop eating. Shame turns people inside out, determines the measure of their humanity or meanness. How can we look back, find the right words for calm? It happens that there is no time to wipe the tears and blow the nose. The man is likened to a harried dog. He does not see or hear. Sometimes he even comes to suicide. It is only the highly offended man who does not forgive such a poor guy! He, who did not spare him, added the torments, deciding to shame him even more, perhaps, is himself deprived of conscience. But the people I see today don’t only feel the shame, they do not even know how to blush committing dishonest affairs. When they are admonished, they even feel offended. « I told you I was confused, what else do you want? »-wonder some of them. Or snapping: « Okay, okay. Well, I am ashamed. And you would not be mistaken in my place? » There are those for whom nothing is exasperated. Their argument is that: « No one has ever died from such mistakes! - They exclaim. - That's what did such and such, and there is nothing - are living. How can you compare my crime with their committed crime? And I had the reason...» What can we say about these people? Is there a shame in their words or not? If this is called shame, then what about the scriptures and the words of the wise? Is the truth in them, or in the words of these people? And whether they believe in Allah after this?</p>
+    <button class="btn btn-success" onclick="nextCard('card37')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card37" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-seventh word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer37')">Show word</button>
+    <p class="answer" id="answer37">1. The dignity of a man is determined by the way that he goes to the goal rather than the fact whether he reaches it.
+    2. The finest thoughts fade after passing through human lips.
+    3. There is no certainty in how a wise word would be apprehended by selfish ignorant.
+    4. Help the wise. To promote the ungrateful means to descend you.
+    5. The son who worships only his father is the enemy of the people, the son of the people is your friend.
+    6. A strong man though wishes a lot, but contents with a small; a worthless man asks little, but is not happy, even when he receives more.
+    7. Working only for himself is like the animal that takes care of his belly. Lord loves the one who works for the good of mankind.
+    8. Who poisoned Socrates, burnt Joan D’Arcy, crucified Christ, and buried Mohammed in the remains of a camel? The crowd did it. Then the crowd has no mind. Manage to direct it to the path of truth.
+    9. The man is a child of his time. If he is bad, his contemporaries are guilty of this.
+    10. If I had the power, I would cut off the tongue to someone who says that man is incorrigible.
+    11. Loneliness is a death for a man. All the troubles fall on his head. However, the world is filled with not only the troubles, but also with entertainments. Who can withstand the first? And who will not die in the second?
+    12. Who has not been in trouble! To lose hope is for the weak. Does not for the harsh and snowy winter go summer with sparkling lakes and thick grass?
+    13. Who screams in anger is harmless, be afraid of the one who is angry in silence.
+    14. People lose their heads of joy and happiness. Only one of the thousands of the lucky manages to keep the mind in order not to appear naked in front of the people.
+    15. The deal goes well with skills.
+    16. Glory is a high rock. Patient snake crawls on it, a falcon soars to its peak in the rapid flight. Unharmonious people praise the one who did not reach it. And the foolish believes this hype.
+    17. The world is the vast ocean. The time is unceasing wind. Generations are like the waves, hurrying one after the other, and on their change eternal life keeps.
+    18. A beggar, famous for his mind, above the happy king. A young man, who sells fruits of his labor, is worthy an old man who sells his beard.
+    19. The trick turns a man into a beggar. Hypocrisy turns Sufi into a parasite.
+    20. A bad friend is like a shadow. When the sun shines, you will not get rid of him, and when the clouds are gathering above the head – you will not find him.
+    21. Trust someone who is closed, but be friends with someone who is sociable. Beware of the careless, but be a support to the saddened.
+    22. Anger without the power is a widower; scientist without the followers is a widower; love without fidelity is the widow.
+    23. As long as you're not happy, everyone wishes you goodness. But if your destiny lifts you up you will be your only well-wisher.</p>
+    <button class="btn btn-success" onclick="nextCard('card38')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card38" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-eighth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer38')">Show word</button>
+    <p class="answer" id="answer38">Oh, the children, the solace of my heart! Everything I wrote about human nature and life, I leave you for memory. Read these lines without indifference and you will feel the love for me. Aspiration to truth and its comprehension are born in higher consciousness; human consciousness is determined by his humanity, intelligence, and interest in science.
+
+The appearance of these qualities is contributed by the feelings of purity and strength of the body, which are given to man by birth, and their development depends on honest friends and wise mentors.
+
+But children do not go to school themselves, not willingly acquire knowledge: at first, they either have to be forced or attracted to this by tricks. And if gradually, getting used to study, the children drawn towards it willingly, if they have a thirst for knowledge, only in this case can we say that they have become people. Now we can hope that they will master science and use it for the good of the people; they will learn to distinguish good from evil, dubious from valid, genuine from fake; learn about Allah, themselves, and the world.
+
+However, in most cases, children remain half-educated, if not ignorant. The cause of all is the violence from the side of the parents and the mullahs, which kills sincerity in the children. This loss turns out to be the hardest misfortune. There is no sense from studying these people because they are insincere: the pursuit of science, and the relation to mentors, and even the belief in the sacred teaching - iman. Bring them up as fully humans is almost impossible because Allah is "the way of truth," and the truth is incompatible with violence. Will your friend to whom you sent the invitation through his enemy come to you? When there is no love for Allah in the human soul, there is no faith in him.
+
+Nevertheless, humanity lives, trusting in the future; it hopes for the best sons, not the villains, for the scientists, not the ignorant.
+
+What are the ways of knowing the truth and the verity?
+
+Man masters science and knowledge when all his being tends to truth and verity, trying to understand the essence of phenomena. Reason and faith are moving him because the truth is from the earth, and he goes to it in his mind, but the verity is from Allah, and he takes it for granted...</p>
+    <button class="btn btn-success" onclick="nextCard('card39')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card39" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The thirty-ninth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer39')">Show word</button>
+    <p class="answer" id="answer39">Our fathers and grandfathers compared to today's generation, of course, had less knowledge. They were brusque in manner, less cultured than we are. But our grandfathers had two such qualities which we now cannot boast. This is a desire for unity and a concern for honor. We have acquired a lot, became more educated: life moves forward without restraint. But, not having regained these two uplifting human qualities, we will not be able to stand in a row with great peoples. Moreover, all our achievements and the searches do not turn out to benefit us, but only make harm.
+
+In ancient times, the people were able to honor the best men. The most honest and wise of them were given the special powers and were called the "el-bass" - the head of the nation and the "top-bass" - the leader of the community. These selected solved litigation and ruled the country life, and all the rest obeyed their will and were engaged in the large or small household works. People said: «Take a stick and, if necessary, make it into a bat», - but they added: «When everyone considers himself a Biy, it is closely on the earth; when the people are united with their leader, they will not burn in a fire. » Yes, the people stood like a wall for their leaders, giving them the reins and helping them in everything. They did not notice the shortcomings of their idols, praised their insight. And by honoring them as a deity, they became better. What did the leaders have to worry if not for the welfare and the eminency of the country when the wealth of the people was their wealth, and the people were their brothers? There was such a proverb in the steppe: «Who does not value his honor, will be hurt by the other ». And again, people warned each other:«Thirsty for revenge for personal offense harms the common affairs». They also said: «Six squabblers will miss what they already hold in their hands, four amicable will find even what is hidden in heaven», «Who loves the way, will find the treasury, who loves disputes will meet the trouble», «A relative can lose a human face, but he never loses blood ties. »
+
+When somebody in the auls mentioned the names of the ancestors and appealed to their spirit, the relatives stopped feuding and forgot their resentment. They all went to protect the offended. Where are these two high qualities now? They were the fruits of dignity and fortitude, and losing these fine qualities of ancestors, we lost everything. Now there is no friendship. The peace of mind is replaced by deception. And they cannot feud. Anger is replaced by the envy and squabbles.</p>
+    <button class="btn btn-success" onclick="nextCard('card40')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card40" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The fortieth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer40')">Show word</button>
+    <p class="answer" id="answer40">Who can answer my questions? Why do we, the Kazakhs, praise the dead but it goes only the unkind rumor of the living? Why do the feeble old men get along with the young and cannot live in harmony with each other though losing some of their peers every day. We worry deeply for a distant relative and love him like a brother while he lives in a foreign land. But when he succeeds to return home we behave with him like with an enemy after some time. Why is this happening?
+
+Seeing the decent in another people, we admire him, praise to the skies by calling him a radiant, luminous... But why do not we encourage our fellow countrymen, whether they are even a cut above strangers? Why is, coming to a distant foreign country, a person lying shamelessly showing off his land, and returned home again lying, now lavishing praise on someone else's land?
+
+Why does the Kazakh adore his child while he is small and quickly loses interest in him when he is grown?
+
+Why do not relatives come to a joyful toy or heavy funeral but they are right here when it comes to attacks and theft? How to understand the relative, who did not lift a finger in order to make your horse come to the finish first but was offended when you passed him by dividing the prize? In the old days people remembered to death services rendered to them. «Such-and-such, let God give him happiness, helped me to get to shelter when my horse was completely exhausted», - They remembered with gratitude. Why do people, taking your help, immediately forget about it now? How can you explain that the son of the Biy, getting impoverished, is not ashamed to steal but considers it shameful to serve the other Biy?
+
+Two good people cannot get along in the same aul, and the two scoundrels will come together very closely. How does this happen?
+
+Why did someone, whom you considered a friend and put him on the horse, turned his back to you, getting a horse from your enemy? Why do people sometimes not content with the usual conversation with a clever man and eager to death to hear the word of an enemy?
+
+Why do not people want happiness to a friend? If the friend somehow risen, then exactly this man becomes his implacable enemy. There are people who cannot find a counselor. But why do they avoid those that are able to see the whole inside story? Some people visiting guests behave as if they have taken along all their livestock. But why do they banish their cattle away from home when they wait for guests?
+
+Why do people always long for peace if they are soon tired of it?
+
+Why are lively, inspired men have-nots, even when they rule the people?
+
+Why are tokals - younger wives - always obstinate?
+
+ Why are immoral people always decisive?
+
+ Why do silly stubborn act contrary to reason?
+
+ Why are restrained, having a moderate lifestyle people considered weak, but libertines and bouncers, who commit scandals everywhere have a reputation of being dashing?
+
+The Kazakhs will not be surprised with the word of truth. They do not listen to it, dismiss it as if they are too busy to engage in empty talk. But if the fiction appears they stumble around it like milk, in which leaven is thrown, and will not go away until they listen to it to the last word. Why are the Kazakhs susceptible to falsehood?</p>
+    <button class="btn btn-success" onclick="nextCard('card41')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card41" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The forty-first word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer41')">Show word</button>
+    <p class="answer" id="answer41">The man, who is truly concerned about the future of the Kazakhs and is not only going to give advice, but also to implement them in practice, must satisfy one of two requirements.
+
+The first condition is: in the hands of this man should be concentrated all power to manage people. Only then he will be able to take away by force to study. Children need to be defined in the various madrasas, for there are a great many sciences and they need to master them all. Girls should be also attached to study, let them study at least the religious sciences, if not impossible to do others. It is necessary to ensure that the people would give the means necessary for the study of children and their content. And then, when young men and women will enrich themselves with knowledge and their grown old fathers will no longer command the steppe, maybe then the Kazakhs will correct their unenviable situation.
+
+The second condition is: in the hands of this man should be enormous wealth. Only then he will be able to bestow all the Kazakhs, whose children he will take to send them to school.
+
+But today there is no such power that would be too strong to keep people in line. And there is no such a rich man in the steppes that would be able to appease the millions. You will not get the Kazakh with words: will not scare him with threats, will not shame him with reproaches. They inherited ignorance from their fathers, along with the mother's milk; it came into their flesh and blood and killed their pursuit of beauty. And they do not think that there are things in this world more interesting than the silly laughter, whispering, disputes and bickering. If such idea comes to their mind, it does not stay long. It is in vain to prove this to the Kazakhs: in one ear he will let your words of another release. So who are we in the end, the people or the unruly crowd?  What should we do to become enlightened people?</p>
+    <button class="btn btn-success" onclick="nextCard('card42')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card42" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The forty-second word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer42')">Show word</button>
+    <p class="answer" id="answer42">The Kazakh’s addiction to bad is due to idleness. If he was engaged in arable farming or trade, he would have no free time on fiddlesticks. But the Kazakh is not used to plow the land or trade. Idleness turned the Kazakh into a stroller. Borrowed someone’s nag for some time, he wanders from one aul to another to live on a free ride or collects gossips, trying to get people involved in the intrigue and embroil them, or himself, along with others like he builds intrigues. An honest worker would consider such a life of a dog. No matter how the work is hard, he would not exchange it for vagrancy. It seems boring to rich people to live, engaging in the cattle breeding. They leave the flocks to the care of the shepherds or their little children and leave the houses. Rich people suffer when their flocks become the prey of thieves and predators or die of cold and starvation, but they cannot bear to remain on the sidelines in conspiracies, gossip and squabbles. They have to travel around the auls, meddle in all disputes and litigation, and then, lounging behind another dastarkhan they entertain with gossips about human misery. It has become a habit of the people, because the bad quickly becomes the property of the crowd. In the steppe they do not appreciate people who know a lot about running the household, who are able to graze and grow the cattle, but honor troublemakers and gossipers. Many kind Kazakhs have cast their big or small farms and now wander across the steppe. They fish out gossips, look for fights, and take food from stranger dastarkhan. They do not care about the fact that their farms, looked after by the friends or neighbors, are getting poor, and families suffer from hardship. People now boast not of wealth but of the skill to cheat an honest man, they do not pride their mind and honor, but the art of making denunciations of the enemies. Even a poor man with one horse, who never held a beautiful Kamcha in his hands, knowing these two "arts", extorts a good horse of some Biy, eats greasy besbarmak, sits at the place of honor on a visit. These people know the rich who are not indifferent to flattery, like the five fingers. First, they achieve their goodwill by "good advice", and then completely subordinate them. «You only order, - fawns such an «adviser». - And I will spare the life for you. I am ready to go through fire and water ...» You'll see - he already owns the wealth of his ward, as if his own, and becomes a respected man in the village. Miserable rich man does not realize that he lost his independence and peace of mind forever. He does not see that he shells out in vain. He gradually gets used to consult with a crook, which spreads before him like a cow not to lose his position, on any occasion. «O my Lord! Don't you know him? -He whispers in the ear of Biy about a worthy man. - After all, it is a known intriguer! For this trick you must say so, but for that in the other way». And he seeks to ensure that the Biy starts to say to a good man the wrong words. A good man turns away from the Biy, unhappy after the conversation with him and the counselor needs only this. «Now you see what is he? The counselor concluded. – It’s good that you followed my advice. He was cunning, you know! Is it a well-wisher who has done so? » Biy loses the will and now cannot take a step without his adviser. He stops to trust people, and people no longer believe him. That is the mind and way of life of steppe peoples.</p>
+    <button class="btn btn-success" onclick="nextCard('card43')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card43" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The forty-third word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer43')">Show word</button>
+    <p class="answer" id="answer43">The Kazakh’s addiction to bad is due to idleness. If he was engaged in arable farming or trade, he would have no free time on fiddlesticks. But the Kazakh is not used to plow the land or trade. Idleness turned the Kazakh into a stroller. Borrowed someone’s nag for some time, he wanders from one aul to another to live on a free ride or collects gossips, trying to get people involved in the intrigue and embroil them, or himself, along with others like he builds intrigues. An honest worker would consider such a life of a dog. No matter how the work is hard, he would not exchange it for vagrancy. It seems boring to rich people to live, engaging in the cattle breeding. They leave the flocks to the care of the shepherds or their little children and leave the houses. Rich people suffer when their flocks become the prey of thieves and predators or die of cold and starvation, but they cannot bear to remain on the sidelines in conspiracies, gossip and squabbles. They have to travel around the auls, meddle in all disputes and litigation, and then, lounging behind another dastarkhan they entertain with gossips about human misery. It has become a habit of the people, because the bad quickly becomes the property of the crowd. In the steppe they do not appreciate people who know a lot about running the household, who are able to graze and grow the cattle, but honor troublemakers and gossipers. Many kind Kazakhs have cast their big or small farms and now wander across the steppe. They fish out gossips, look for fights, and take food from stranger dastarkhan. They do not care about the fact that their farms, looked after by the friends or neighbors, are getting poor, and families suffer from hardship. People now boast not of wealth but of the skill to cheat an honest man, they do not pride their mind and honor, but the art of making denunciations of the enemies. Even a poor man with one horse, who never held a beautiful Kamcha in his hands, knowing these two "arts", extorts a good horse of some Biy, eats greasy besbarmak, sits at the place of honor on a visit. These people know the rich who are not indifferent to flattery, like the five fingers. First, they achieve their goodwill by "good advice", and then completely subordinate them. «You only order, - fawns such an «adviser». - And I will spare the life for you. I am ready to go through fire and water ...» You'll see - he already owns the wealth of his ward, as if his own, and becomes a respected man in the village. Miserable rich man does not realize that he lost his independence and peace of mind forever. He does not see that he shells out in vain. He gradually gets used to consult with a crook, which spreads before him like a cow not to lose his position, on any occasion. «O my Lord! Don't you know him? -He whispers in the ear of Biy about a worthy man. - After all, it is a known intriguer! For this trick you must say so, but for that in the other way». And he seeks to ensure that the Biy starts to say to a good man the wrong words. A good man turns away from the Biy, unhappy after the conversation with him and the counselor needs only this. «Now you see what is he? The counselor concluded. – It’s good that you followed my advice. He was cunning, you know! Is it a well-wisher who has done so? » Biy loses the will and now cannot take a step without his adviser. He stops to trust people, and people no longer believe him. That is the mind and way of life of steppe peoples.</p>
+    <button class="btn btn-success" onclick="nextCard('card44')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card44" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The forty-forth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer44')">Show word</button>
+    <p class="answer" id="answer44">The Kazakh’s addiction to bad is due to idleness. If he was engaged in arable farming or trade, he would have no free time on fiddlesticks. But the Kazakh is not used to plow the land or trade. Idleness turned the Kazakh into a stroller. Borrowed someone’s nag for some time, he wanders from one aul to another to live on a free ride or collects gossips, trying to get people involved in the intrigue and embroil them, or himself, along with others like he builds intrigues. An honest worker would consider such a life of a dog. No matter how the work is hard, he would not exchange it for vagrancy. It seems boring to rich people to live, engaging in the cattle breeding. They leave the flocks to the care of the shepherds or their little children and leave the houses. Rich people suffer when their flocks become the prey of thieves and predators or die of cold and starvation, but they cannot bear to remain on the sidelines in conspiracies, gossip and squabbles. They have to travel around the auls, meddle in all disputes and litigation, and then, lounging behind another dastarkhan they entertain with gossips about human misery. It has become a habit of the people, because the bad quickly becomes the property of the crowd. In the steppe they do not appreciate people who know a lot about running the household, who are able to graze and grow the cattle, but honor troublemakers and gossipers. Many kind Kazakhs have cast their big or small farms and now wander across the steppe. They fish out gossips, look for fights, and take food from stranger dastarkhan. They do not care about the fact that their farms, looked after by the friends or neighbors, are getting poor, and families suffer from hardship. People now boast not of wealth but of the skill to cheat an honest man, they do not pride their mind and honor, but the art of making denunciations of the enemies. Even a poor man with one horse, who never held a beautiful Kamcha in his hands, knowing these two "arts", extorts a good horse of some Biy, eats greasy besbarmak, sits at the place of honor on a visit. These people know the rich who are not indifferent to flattery, like the five fingers. First, they achieve their goodwill by "good advice", and then completely subordinate them. «You only order, - fawns such an «adviser». - And I will spare the life for you. I am ready to go through fire and water ...» You'll see - he already owns the wealth of his ward, as if his own, and becomes a respected man in the village. Miserable rich man does not realize that he lost his independence and peace of mind forever. He does not see that he shells out in vain. He gradually gets used to consult with a crook, which spreads before him like a cow not to lose his position, on any occasion. «O my Lord! Don't you know him? -He whispers in the ear of Biy about a worthy man. - After all, it is a known intriguer! For this trick you must say so, but for that in the other way». And he seeks to ensure that the Biy starts to say to a good man the wrong words. A good man turns away from the Biy, unhappy after the conversation with him and the counselor needs only this. «Now you see what is he? The counselor concluded. – It’s good that you followed my advice. He was cunning, you know! Is it a well-wisher who has done so? » Biy loses the will and now cannot take a step without his adviser. He stops to trust people, and people no longer believe him. That is the mind and way of life of steppe peoples.</p>
+    <button class="btn btn-success" onclick="nextCard('card45')">Next word</button>
+  </div>
+</div>
+<div class="card" id="card45" style="display: none;">
+  <div class="card-body">
+    <h5 class="card-title">The forty-fifth word</h5>
+    <button class="btn btn-primary" onclick="showAnswer('answer45')">Show word</button>
+    <p class="answer" id="answer45">The Kazakh’s addiction to bad is due to idleness. If he was engaged in arable farming or trade, he would have no free time on fiddlesticks. But the Kazakh is not used to plow the land or trade. Idleness turned the Kazakh into a stroller. Borrowed someone’s nag for some time, he wanders from one aul to another to live on a free ride or collects gossips, trying to get people involved in the intrigue and embroil them, or himself, along with others like he builds intrigues. An honest worker would consider such a life of a dog. No matter how the work is hard, he would not exchange it for vagrancy. It seems boring to rich people to live, engaging in the cattle breeding. They leave the flocks to the care of the shepherds or their little children and leave the houses. Rich people suffer when their flocks become the prey of thieves and predators or die of cold and starvation, but they cannot bear to remain on the sidelines in conspiracies, gossip and squabbles. They have to travel around the auls, meddle in all disputes and litigation, and then, lounging behind another dastarkhan they entertain with gossips about human misery. It has become a habit of the people, because the bad quickly becomes the property of the crowd. In the steppe they do not appreciate people who know a lot about running the household, who are able to graze and grow the cattle, but honor troublemakers and gossipers. Many kind Kazakhs have cast their big or small farms and now wander across the steppe. They fish out gossips, look for fights, and take food from stranger dastarkhan. They do not care about the fact that their farms, looked after by the friends or neighbors, are getting poor, and families suffer from hardship. People now boast not of wealth but of the skill to cheat an honest man, they do not pride their mind and honor, but the art of making denunciations of the enemies. Even a poor man with one horse, who never held a beautiful Kamcha in his hands, knowing these two "arts", extorts a good horse of some Biy, eats greasy besbarmak, sits at the place of honor on a visit. These people know the rich who are not indifferent to flattery, like the five fingers. First, they achieve their goodwill by "good advice", and then completely subordinate them. «You only order, - fawns such an «adviser». - And I will spare the life for you. I am ready to go through fire and water ...» You'll see - he already owns the wealth of his ward, as if his own, and becomes a respected man in the village. Miserable rich man does not realize that he lost his independence and peace of mind forever. He does not see that he shells out in vain. He gradually gets used to consult with a crook, which spreads before him like a cow not to lose his position, on any occasion. «O my Lord! Don't you know him? -He whispers in the ear of Biy about a worthy man. - After all, it is a known intriguer! For this trick you must say so, but for that in the other way». And he seeks to ensure that the Biy starts to say to a good man the wrong words. A good man turns away from the Biy, unhappy after the conversation with him and the counselor needs only this. «Now you see what is he? The counselor concluded. – It’s good that you followed my advice. He was cunning, you know! Is it a well-wisher who has done so? » Biy loses the will and now cannot take a step without his adviser. He stops to trust people, and people no longer believe him. That is the mind and way of life of steppe peoples.</p>
+    <button class="btn btn-success" onclick="nextCard('card1')">Next word</button>
+  </div>
+</div>
+
+
+
+
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+  function showAnswer(answerId) {
+    $("#" + answerId).toggleClass("show");
+  }
+
+  function nextCard(nextCardId) {
+    $(".card").hide();
+    $("#" + nextCardId).show();
+    $(".card").css("transform", "scale(1)");
+  }
+</script>
+
+</body>
+</html>

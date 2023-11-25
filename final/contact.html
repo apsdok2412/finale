@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- Add the link to the Dancing Script font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('abai.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            color: black;
+            padding: 20px;
+            cursor: pointer;
+            font-size: 2.7em;
+            font-weight: bold;
+            margin-right: 1200px;
+            font-family: 'Dancing Script', cursive;
+
+            /* Animation effect */
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        header:hover {
+            font-size: 2.95em;
+        }
+
+        nav {
+            background-color: transparent;
+            color: black;
+            border-bottom: 2px solid black;
+            padding: 10px 20px;
+            margin-top: 1px;
+            font-size: 1.75em;
+            font-weight: bold;
+            margin-left: 40px;
+            width: 55%;
+            font-family: 'Times New Roman', serif;
+
+            /* Animation effect */
+            transition: font-size 0.3s ease-in-out;
+        }
+
+        nav a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            font-size: 1.1em;
+        }
+
+        .container-text {
+            width: 500px;
+            margin: 50px 0 0 100px;
+            text-align: left;
+            color: black;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 100px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Style for the contact form */
+        .contact-form {
+            margin: 50px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+        }
+
+        /* Style for form elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Style for form buttons with Bootstrap classes */
+        .btn-primary {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+  </style>
+  <title>Abai K.</title>
+</head>
+<body>
+
+<header onclick="location.href='home.html'">
+    Abai K.
+</header>
+
+<nav>
+    <a href="biography.html">Biography</a>
+    <a href="proverbs.html">The Book Of Words</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container-text">
+    <!-- Contact Form -->
+    <form class="contact-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="surname">Surname:</label>
+            <input type="text" class="form-control" id="surname" placeholder="Enter your surname">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+        </div>
+        <div class="form-group">
+            <label for="comments">Comments about Abai Kunanbayev:</label>
+            <textarea class="form-control" id="comments" rows="3" placeholder="Enter your comments"></textarea>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="submitForm()">Submit</button>
+    </form>
+</div>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for button animation -->
+<script>
+    function submitForm() {
+        alert('Form submitted!'); // You can replace this with your desired functionality
+    }
+</script>
+<footer class="fixed-bottom bg-light py-3">
+    <p class="mb-0">&copy; 2023 Abai K. All rights reserved. | Contact: 87770495570</p>
+    <!-- Additional footer content, links, or contact details can be added here -->
+  </footer>
+</body>
+</html>
